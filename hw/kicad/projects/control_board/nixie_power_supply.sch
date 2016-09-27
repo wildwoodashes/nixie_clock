@@ -1,0 +1,494 @@
+EESchema Schematic File Version 2
+LIBS:control_board-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:nixie_lib
+LIBS:nixie_clock-rescue
+LIBS:control_board-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title "Control Board"
+Date "2016-09-14"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R-RESCUE-nixie_clock R3
+U 1 1 51B3FCC0
+P 6000 5600
+F 0 "R3" V 6080 5600 40  0000 C CNN
+F 1 "0.1" V 6007 5601 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5930 5600 30  0001 C CNN
+F 3 "~" H 6000 5600 30  0000 C CNN
+	1    6000 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R2
+U 1 1 51B3FCC6
+P 5000 5600
+F 0 "R2" V 5080 5600 40  0000 C CNN
+F 1 "10k" V 5007 5601 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4930 5600 30  0001 C CNN
+F 3 "~" H 5000 5600 30  0000 C CNN
+	1    5000 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R4
+U 1 1 51B3FCCC
+P 6900 4850
+F 0 "R4" V 6980 4850 40  0000 C CNN
+F 1 "1.123MEG" V 6907 4851 40  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6830 4850 30  0001 C CNN
+F 3 "~" H 6900 4850 30  0000 C CNN
+	1    6900 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R1
+U 1 1 51B3FCD2
+P 2150 3900
+F 0 "R1" V 2230 3900 40  0000 C CNN
+F 1 "10k" V 2157 3901 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 3900 30  0001 C CNN
+F 3 "~" H 2150 3900 30  0000 C CNN
+	1    2150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C4
+U 1 1 51B3FCD8
+P 6900 5150
+F 0 "C4" H 6900 5250 40  0000 L CNN
+F 1 "100pF" H 6906 5065 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6938 5000 30  0001 C CNN
+F 3 "~" H 6900 5150 60  0000 C CNN
+	1    6900 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C8
+U 1 1 51B3FCF0
+P 9250 3150
+F 0 "C8" H 9250 3250 40  0000 L CNN
+F 1 "47uF" H 9256 3065 40  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D12.5_L25_P5" H 9288 3000 30  0001 C CNN
+F 3 "~" H 9250 3150 60  0000 C CNN
+	1    9250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R5
+U 1 1 51B3FCF6
+P 9700 2750
+F 0 "R5" V 9780 2750 40  0000 C CNN
+F 1 "18k" V 9707 2751 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9630 2750 30  0001 C CNN
+F 3 "~" H 9700 2750 30  0000 C CNN
+	1    9700 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L INDUCTOR L1
+U 1 1 51B3FD02
+P 6000 2050
+F 0 "L1" V 5950 2050 40  0000 C CNN
+F 1 "150u" V 6100 2050 40  0000 C CNN
+F 2 "Nixie:SRU1048-151Y" V 5850 2050 60  0000 C CNN
+F 3 "~" H 6000 2050 60  0000 C CNN
+	1    6000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 51B3FD08
+P 8650 3700
+F 0 "#PWR08" H 8650 3700 30  0001 C CNN
+F 1 "GND" H 8650 3630 30  0001 C CNN
+F 2 "" H 8650 3700 60  0000 C CNN
+F 3 "" H 8650 3700 60  0000 C CNN
+	1    8650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 51B3FD0E
+P 8650 3700
+F 0 "#PWR09" H 8650 3700 30  0001 C CNN
+F 1 "GND" H 8650 3630 30  0001 C CNN
+F 2 "" H 8650 3700 60  0000 C CNN
+F 3 "" H 8650 3700 60  0000 C CNN
+	1    8650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 51B3FD20
+P 3700 6200
+F 0 "#PWR010" H 3700 6200 30  0001 C CNN
+F 1 "GND" H 3700 6130 30  0001 C CNN
+F 2 "" H 3700 6200 60  0000 C CNN
+F 3 "" H 3700 6200 60  0000 C CNN
+	1    3700 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2350 6000 3600
+Wire Wire Line
+	6000 2750 6800 2750
+Connection ~ 6000 2750
+Wire Wire Line
+	7100 2750 9450 2750
+Wire Wire Line
+	8100 2950 8100 2750
+Connection ~ 8100 2750
+Wire Wire Line
+	8450 2950 8450 2750
+Connection ~ 8450 2750
+Wire Wire Line
+	8850 2950 8850 2750
+Connection ~ 8850 2750
+Wire Wire Line
+	9250 2950 9250 2750
+Connection ~ 9250 2750
+Wire Wire Line
+	8100 3350 8100 3550
+Wire Wire Line
+	8100 3550 9250 3550
+Wire Wire Line
+	9250 3550 9250 3350
+Wire Wire Line
+	8450 3350 8450 3550
+Connection ~ 8450 3550
+Wire Wire Line
+	8850 3350 8850 3550
+Connection ~ 8850 3550
+Wire Wire Line
+	8650 3550 8650 3700
+Connection ~ 8650 3550
+Wire Wire Line
+	6000 1500 6000 1750
+Wire Wire Line
+	4400 4300 5150 4300
+Wire Wire Line
+	5150 4300 5150 3800
+Wire Wire Line
+	5150 3800 5700 3800
+Wire Wire Line
+	6000 4000 6000 5350
+Wire Wire Line
+	4400 4500 6000 4500
+Connection ~ 6000 4500
+Wire Wire Line
+	4400 4850 6650 4850
+Wire Wire Line
+	6450 4850 6450 5150
+Wire Wire Line
+	6450 5150 6700 5150
+Connection ~ 6450 4850
+Wire Wire Line
+	7100 5150 7400 5150
+Wire Wire Line
+	7400 5150 7400 4850
+Wire Wire Line
+	7650 4850 7150 4850
+Wire Wire Line
+	7650 2200 7650 4850
+Connection ~ 7650 2750
+Connection ~ 7400 4850
+Wire Wire Line
+	5000 5350 5000 4850
+Connection ~ 5000 4850
+Wire Wire Line
+	3550 5350 3550 6050
+Wire Wire Line
+	3550 6050 6000 6050
+Wire Wire Line
+	5000 6050 5000 5850
+Wire Wire Line
+	3850 5350 3850 6050
+Connection ~ 3850 6050
+Wire Wire Line
+	3700 6050 3700 6200
+Connection ~ 3700 6050
+Wire Wire Line
+	6000 6050 6000 5850
+Connection ~ 5000 6050
+$Comp
+L MAX1771 U1
+U 1 1 51B3FD57
+P 3700 3400
+F 0 "U1" H 4050 3100 60  0000 C CNN
+F 1 "MAX1771" H 4050 3000 60  0000 C CNN
+F 2 "Power_Integrations:PDIP-8" H 3050 2900 60  0000 C CNN
+F 3 "" H 4050 3100 60  0000 C CNN
+	1    3700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C2
+U 1 1 51B3FD5D
+P 4150 3150
+F 0 "C2" H 4150 3250 40  0000 L CNN
+F 1 "68uF" H 4156 3065 40  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_HandSoldering" H 4188 3000 30  0001 C CNN
+F 3 "~" H 4150 3150 60  0000 C CNN
+	1    4150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C3
+U 1 1 51B3FD63
+P 4450 3150
+F 0 "C3" H 4450 3250 40  0000 L CNN
+F 1 "0.1uF" H 4456 3065 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4488 3000 30  0001 C CNN
+F 3 "~" H 4450 3150 60  0000 C CNN
+	1    4450 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2750 3700 3650
+Wire Wire Line
+	4150 2950 4150 2850
+Wire Wire Line
+	3700 2850 4450 2850
+Connection ~ 3700 2850
+Wire Wire Line
+	4450 2850 4450 2950
+Connection ~ 4150 2850
+Wire Wire Line
+	4150 3350 4150 3450
+Wire Wire Line
+	4150 3450 4450 3450
+Wire Wire Line
+	4450 3450 4450 3350
+Wire Wire Line
+	4300 3450 4300 3550
+Connection ~ 4300 3450
+$Comp
+L GND #PWR011
+U 1 1 51B3FD74
+P 4300 3550
+F 0 "#PWR011" H 4300 3550 30  0001 C CNN
+F 1 "GND" H 4300 3480 30  0001 C CNN
+F 2 "" H 4300 3550 60  0000 C CNN
+F 3 "" H 4300 3550 60  0000 C CNN
+	1    4300 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4300 3000 4300
+Wire Wire Line
+	2150 4300 2150 4150
+Wire Wire Line
+	2150 3500 2150 3650
+Connection ~ 2150 4300
+$Comp
+L C-RESCUE-nixie_clock C1
+U 1 1 51B3FD85
+P 2600 4800
+F 0 "C1" H 2600 4900 40  0000 L CNN
+F 1 "0.1uF" H 2606 4715 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2638 4650 30  0001 C CNN
+F 3 "~" H 2600 4800 60  0000 C CNN
+	1    2600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 51B3FD8B
+P 2600 5150
+F 0 "#PWR012" H 2600 5150 30  0001 C CNN
+F 1 "GND" H 2600 5080 30  0001 C CNN
+F 2 "" H 2600 5150 60  0000 C CNN
+F 3 "" H 2600 5150 60  0000 C CNN
+	1    2600 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4600 2600 4500
+Wire Wire Line
+	2600 4500 3000 4500
+Wire Wire Line
+	2600 5000 2600 5150
+$Comp
+L LED-RESCUE-nixie_clock D2
+U 1 1 51B3FD94
+P 10350 2750
+F 0 "D2" H 10350 2850 50  0000 C CNN
+F 1 "LTST-C190GKT" H 10350 2650 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 10350 2750 60  0001 C CNN
+F 3 "~" H 10350 2750 60  0000 C CNN
+	1    10350 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 2750 10150 2750
+Wire Wire Line
+	10550 2750 10750 2750
+Wire Wire Line
+	10750 2750 10750 2950
+$Comp
+L GND #PWR013
+U 1 1 51B3FD9D
+P 10750 2950
+F 0 "#PWR013" H 10750 2950 30  0001 C CNN
+F 1 "GND" H 10750 2880 30  0001 C CNN
+F 2 "" H 10750 2950 60  0000 C CNN
+F 3 "" H 10750 2950 60  0000 C CNN
+	1    10750 2950
+	1    0    0    -1  
+$EndComp
+Text HLabel 1550 4300 0    60   Input ~ 0
+180V_SHDN
+$Comp
+L C-RESCUE-nixie_clock C7
+U 1 1 575BD4EC
+P 8850 3150
+F 0 "C7" H 8850 3250 40  0000 L CNN
+F 1 "47uF" H 8856 3065 40  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D12.5_L25_P5" H 8888 3000 30  0001 C CNN
+F 3 "~" H 8850 3150 60  0000 C CNN
+	1    8850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C6
+U 1 1 575BD540
+P 8450 3150
+F 0 "C6" H 8450 3250 40  0000 L CNN
+F 1 "47uF" H 8456 3065 40  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D12.5_L25_P5" H 8488 3000 30  0001 C CNN
+F 3 "~" H 8450 3150 60  0000 C CNN
+	1    8450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C5
+U 1 1 575BD5B4
+P 8100 3150
+F 0 "C5" H 8100 3250 40  0000 L CNN
+F 1 "47uF" H 8106 3065 40  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D12.5_L25_P5" H 8138 3000 30  0001 C CNN
+F 3 "~" H 8100 3150 60  0000 C CNN
+	1    8100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L IPB50R199CP Q1
+U 1 1 575FC428
+P 5900 3800
+F 0 "Q1" H 5910 3970 50  0000 R CNN
+F 1 "IPB50R199CP" H 5850 3650 50  0000 R CNN
+F 2 "Nixie:to263" H 5600 3550 60  0000 C CNN
+F 3 "" H 5900 3800 60  0000 C CNN
+	1    5900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR014
+U 1 1 575E707A
+P 3700 2750
+F 0 "#PWR014" H 3700 2600 50  0001 C CNN
+F 1 "+12V" H 3700 2890 50  0000 C CNN
+F 2 "" H 3700 2750 50  0000 C CNN
+F 3 "" H 3700 2750 50  0000 C CNN
+	1    3700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR015
+U 1 1 575E7381
+P 6000 1500
+F 0 "#PWR015" H 6000 1350 50  0001 C CNN
+F 1 "+12V" H 6000 1640 50  0000 C CNN
+F 2 "" H 6000 1500 50  0000 C CNN
+F 3 "" H 6000 1500 50  0000 C CNN
+	1    6000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D1
+U 1 1 575E7704
+P 6950 2750
+F 0 "D1" H 6950 2850 50  0000 C CNN
+F 1 "D" H 6950 2650 50  0000 C CNN
+F 2 "Nixie:DO-214AA-2" H 6950 2750 50  0001 C CNN
+F 3 "" H 6950 2750 50  0000 C CNN
+	1    6950 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG016
+U 1 1 57671EA9
+P 8100 2750
+F 0 "#FLG016" H 8100 2845 50  0001 C CNN
+F 1 "PWR_FLAG" H 8100 2930 50  0000 C CNN
+F 2 "" H 8100 2750 50  0000 C CNN
+F 3 "" H 8100 2750 50  0000 C CNN
+	1    8100 2750
+	1    0    0    -1  
+$EndComp
+Text Notes 8350 4000 0    60   ~ 0
+1in high caps
+$Comp
+L +3.3V #PWR017
+U 1 1 579E472A
+P 2150 3500
+F 0 "#PWR017" H 2150 3350 50  0001 C CNN
+F 1 "+3.3V" H 2150 3640 50  0000 C CNN
+F 2 "" H 2150 3500 50  0000 C CNN
+F 3 "" H 2150 3500 50  0000 C CNN
+	1    2150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +170V #PWR018
+U 1 1 57CCC588
+P 7650 2200
+F 0 "#PWR018" H 7650 2050 60  0001 C CNN
+F 1 "+170V" H 7650 2340 60  0000 C CNN
+F 2 "" H 7650 2200 60  0000 C CNN
+F 3 "" H 7650 2200 60  0000 C CNN
+	1    7650 2200
+	1    0    0    -1  
+$EndComp
+Text Notes 6850 3050 0    60   ~ 0
+ES2F
+$EndSCHEMATC

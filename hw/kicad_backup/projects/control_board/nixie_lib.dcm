@@ -1,0 +1,30 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +180V
+K POWER, PWR
+$ENDCMP
+#
+$CMP +3.3V
+K POWER, PWR
+$ENDCMP
+#
+$CMP 161-0725-E
+D DC Barrel Jack
+K DC power barrel jack connector
+$ENDCMP
+#
+$CMP CONN_01X03
+D Connector 01x03
+$ENDCMP
+#
+$CMP SW_LPH_PUSH
+D Push Button
+K Switch
+$ENDCMP
+#
+$CMP SW_PUSH
+D Push Button
+K Switch
+$ENDCMP
+#
+#End Doc Library

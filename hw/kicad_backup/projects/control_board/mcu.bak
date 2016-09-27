@@ -1,0 +1,1072 @@
+EESchema Schematic File Version 2
+LIBS:nixie_clock-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:nixie_lib
+LIBS:nixie_clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 9
+Title ""
+Date "10 jun 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA168A-A-RESCUE-nixie_clock IC1
+U 1 1 51B548B8
+P 2950 4200
+F 0 "IC1" H 2200 5450 40  0000 L BNN
+F 1 "ATMEGA168A-A" H 3350 2800 40  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 2950 5450 30  0000 C CIN
+F 3 "" H 2950 4200 60  0000 C CNN
+	1    2950 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C9
+U 1 1 51B548C7
+P 1000 3350
+F 0 "C9" H 1000 3450 40  0000 L CNN
+F 1 "0.1uF" H 1006 3265 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1038 3200 30  0001 C CNN
+F 3 "~" H 1000 3350 60  0000 C CNN
+	1    1000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR?
+U 1 1 51B548E5
+P 1000 3000
+AR Path="/51B548E5" Ref="#PWR?"  Part="1" 
+AR Path="/51B40844/51B548E5" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 1000 2960 30  0001 C CNN
+F 1 "+3.3V" H 1000 3110 30  0000 C CNN
+F 2 "" H 1000 3000 60  0000 C CNN
+F 3 "" H 1000 3000 60  0000 C CNN
+	1    1000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 51B5490A
+P 1000 3650
+F 0 "#PWR025" H 1000 3650 30  0001 C CNN
+F 1 "GND" H 1000 3580 30  0001 C CNN
+F 2 "" H 1000 3650 60  0000 C CNN
+F 3 "" H 1000 3650 60  0000 C CNN
+	1    1000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C12
+U 1 1 51B54BA2
+P 1750 3950
+F 0 "C12" H 1750 4050 40  0000 L CNN
+F 1 "0.1uF" H 1756 3865 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1788 3800 30  0001 C CNN
+F 3 "~" H 1750 3950 60  0000 C CNN
+	1    1750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 51B54BCA
+P 1750 4200
+F 0 "#PWR026" H 1750 4200 30  0001 C CNN
+F 1 "GND" H 1750 4130 30  0001 C CNN
+F 2 "" H 1750 4200 60  0000 C CNN
+F 3 "" H 1750 4200 60  0000 C CNN
+	1    1750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 51B54C0E
+P 1950 5500
+F 0 "#PWR027" H 1950 5500 30  0001 C CNN
+F 1 "GND" H 1950 5430 30  0001 C CNN
+F 2 "" H 1950 5500 60  0000 C CNN
+F 3 "" H 1950 5500 60  0000 C CNN
+	1    1950 5500
+	1    0    0    -1  
+$EndComp
+Text Notes 800  600  0    60   ~ 0
+Inputs/Outputs
+$Comp
+L C-RESCUE-nixie_clock C13
+U 1 1 51B58822
+P 5750 4750
+F 0 "C13" V 5700 4550 40  0000 L CNN
+F 1 "0.1uF" V 5800 4500 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5788 4600 30  0001 C CNN
+F 3 "~" H 5750 4750 60  0000 C CNN
+	1    5750 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 51B58A00
+P 6100 4750
+F 0 "#PWR028" H 6100 4750 30  0001 C CNN
+F 1 "GND" H 6100 4680 30  0001 C CNN
+F 2 "" H 6100 4750 60  0000 C CNN
+F 3 "" H 6100 4750 60  0000 C CNN
+	1    6100 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR?
+U 1 1 51B595C8
+P 6050 4550
+AR Path="/51B595C8" Ref="#PWR?"  Part="1" 
+AR Path="/51B40844/51B595C8" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 6050 4510 30  0001 C CNN
+F 1 "+3.3V" H 6050 4660 30  0000 C CNN
+F 2 "" H 6050 4550 60  0000 C CNN
+F 3 "" H 6050 4550 60  0000 C CNN
+	1    6050 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 51B59B21
+P 2950 7550
+F 0 "#PWR030" H 2950 7550 30  0001 C CNN
+F 1 "GND" H 2950 7480 30  0001 C CNN
+F 2 "" H 2950 7550 60  0000 C CNN
+F 3 "" H 2950 7550 60  0000 C CNN
+	1    2950 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R22
+U 1 1 51B59BF7
+P 5750 4550
+F 0 "R22" V 5800 4350 40  0000 C CNN
+F 1 "10k" V 5757 4551 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5680 4550 30  0001 C CNN
+F 3 "~" H 5750 4550 30  0000 C CNN
+	1    5750 4550
+	0    -1   -1   0   
+$EndComp
+Text Notes 3100 5700 0    60   ~ 0
+Reset Switch
+Text Notes 3150 6200 0    60   ~ 0
+Time Switch
+Text Notes 3200 6700 0    60   ~ 0
+Up Switch
+Text Notes 3150 7200 0    60   ~ 0
+Down Switch
+$Comp
+L R-RESCUE-nixie_clock R18
+U 1 1 51B5A679
+P 4850 5300
+F 0 "R18" V 4900 5100 40  0000 C CNN
+F 1 "100" V 4857 5301 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4780 5300 30  0001 C CNN
+F 3 "~" H 4850 5300 30  0000 C CNN
+	1    4850 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R19
+U 1 1 51B5A67F
+P 4850 5400
+F 0 "R19" V 4900 5200 40  0000 C CNN
+F 1 "100" V 4857 5401 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4780 5400 30  0001 C CNN
+F 3 "~" H 4850 5400 30  0000 C CNN
+	1    4850 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-nixie_clock D3
+U 1 1 51B5A7A4
+P 5650 5300
+F 0 "D3" H 5650 5500 50  0000 C CNN
+F 1 "LTST-C190GKT" H 5650 5550 50  0001 C CNN
+F 2 "LEDs:LED-0603" H 5650 5300 60  0001 C CNN
+F 3 "~" H 5650 5300 60  0000 C CNN
+	1    5650 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED-RESCUE-nixie_clock D5
+U 1 1 51B5A7B3
+P 6050 5400
+F 0 "D5" H 6050 5500 50  0000 C CNN
+F 1 "LTST-C190GKT" H 6250 5600 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 6050 5400 60  0001 C CNN
+F 3 "~" H 6050 5400 60  0000 C CNN
+	1    6050 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR?
+U 1 1 51B5AAF7
+P 6350 5200
+AR Path="/51B5AAF7" Ref="#PWR?"  Part="1" 
+AR Path="/51B40844/51B5AAF7" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 6350 5160 30  0001 C CNN
+F 1 "+3.3V" H 6350 5310 30  0000 C CNN
+F 2 "" H 6350 5200 60  0000 C CNN
+F 3 "" H 6350 5200 60  0000 C CNN
+	1    6350 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR?
+U 1 1 51B5B627
+P 7750 4450
+AR Path="/51B5B627" Ref="#PWR?"  Part="1" 
+AR Path="/51B40844/51B5B627" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 7750 4410 30  0001 C CNN
+F 1 "+3.3V" H 7750 4560 30  0000 C CNN
+F 2 "" H 7750 4450 60  0000 C CNN
+F 3 "" H 7750 4450 60  0000 C CNN
+	1    7750 4450
+	1    0    0    -1  
+$EndComp
+Text HLabel 1850 900  2    60   Output ~ 0
+SEL_ZERO
+Text HLabel 1850 1000 2    60   Output ~ 0
+SEL_ONE
+Text HLabel 1850 1100 2    60   Output ~ 0
+SEL_TWO
+Text HLabel 1850 1200 2    60   Output ~ 0
+SEL_THREE
+Text HLabel 1850 1300 2    60   Output ~ 0
+SEL_FOUR
+Text HLabel 1850 1400 2    60   Output ~ 0
+SEL_FIVE
+Text HLabel 1850 1500 2    60   Output ~ 0
+SEL_SIX
+Text HLabel 1850 1600 2    60   Output ~ 0
+SEL_SEVEN
+Text HLabel 1850 1700 2    60   Output ~ 0
+SEL_EIGHT
+Text HLabel 1850 1800 2    60   Output ~ 0
+SEL_NINE
+Text HLabel 1850 2400 2    60   Output ~ 0
+SEL_NIX1
+Text HLabel 1850 2500 2    60   Output ~ 0
+SEL_NIX2
+Text HLabel 1850 2600 2    60   Output ~ 0
+SEL_NIX3
+Text HLabel 1850 2300 2    60   Output ~ 0
+SEL_NIX0
+Entry Wire Line
+	1550 900  1650 1000
+Entry Wire Line
+	1550 1000 1650 1100
+Entry Wire Line
+	1550 1100 1650 1200
+Entry Wire Line
+	1550 1200 1650 1300
+Entry Wire Line
+	1550 1400 1650 1500
+Entry Wire Line
+	1550 1300 1650 1400
+Entry Wire Line
+	1550 1500 1650 1600
+Entry Wire Line
+	1550 1600 1650 1700
+Entry Wire Line
+	1550 1700 1650 1800
+Entry Wire Line
+	1550 800  1650 900 
+Entry Wire Line
+	1550 2300 1650 2400
+Entry Wire Line
+	1550 2400 1650 2500
+Entry Wire Line
+	1550 2500 1650 2600
+Entry Wire Line
+	1550 2200 1650 2300
+Text Label 1400 750  2    60   ~ 0
+DIGIT_SEL
+Text Label 1400 2150 2    60   ~ 0
+TUBE_SEL
+Text Label 1750 900  2    60   ~ 0
+S0
+Text Label 1750 1000 2    60   ~ 0
+S1
+Text Label 1750 1100 2    60   ~ 0
+S2
+Text Label 1750 1200 2    60   ~ 0
+S3
+Text Label 1750 1300 2    60   ~ 0
+S4
+Text Label 1750 1400 2    60   ~ 0
+S5
+Text Label 1750 1500 2    60   ~ 0
+S6
+Text Label 1750 1600 2    60   ~ 0
+S7
+Text Label 1750 1700 2    60   ~ 0
+S8
+Text Label 1750 1800 2    60   ~ 0
+S9
+Text Label 1750 2300 2    60   ~ 0
+S0
+Text Label 1750 2400 2    60   ~ 0
+S1
+Text Label 1750 2500 2    60   ~ 0
+S2
+Text Label 1750 2600 2    60   ~ 0
+S3
+Entry Wire Line
+	9250 2100 9350 2200
+Entry Wire Line
+	9250 2200 9350 2300
+Entry Wire Line
+	9250 2300 9350 2400
+Entry Wire Line
+	9250 2400 9350 2500
+Entry Wire Line
+	9250 2600 9350 2700
+Entry Wire Line
+	9250 2500 9350 2600
+Entry Wire Line
+	9250 2700 9350 2800
+Entry Wire Line
+	9350 3000 9250 2900
+Entry Wire Line
+	9350 2900 9250 2800
+Entry Wire Line
+	9250 2000 9350 2100
+Entry Wire Line
+	9350 3850 9250 3750
+Entry Wire Line
+	9350 3750 9250 3650
+Entry Wire Line
+	9350 3550 9250 3450
+Text Label 9650 1800 2    60   ~ 0
+DIGIT_SEL
+Text Label 9200 2000 2    60   ~ 0
+S0
+Text Label 9200 2100 2    60   ~ 0
+S1
+Text Label 9200 2200 2    60   ~ 0
+S2
+Text Label 9200 2300 2    60   ~ 0
+S3
+Text Label 9200 2400 2    60   ~ 0
+S4
+Text Label 9200 2500 2    60   ~ 0
+S5
+Text Label 9200 2600 2    60   ~ 0
+S6
+Text Label 9200 2700 2    60   ~ 0
+S7
+Text Label 9200 2800 2    60   ~ 0
+S8
+Text Label 9200 2900 2    60   ~ 0
+S9
+Entry Wire Line
+	9350 3650 9250 3550
+Text Label 9250 3450 2    60   ~ 0
+S0
+Text Label 9250 3550 2    60   ~ 0
+S1
+Text Label 9250 3650 2    60   ~ 0
+S2
+Text Label 9250 3750 2    60   ~ 0
+S3
+Text Label 9400 3950 0    60   ~ 0
+TUBE_SEL
+$Sheet
+S 8300 5150 850  850 
+U 54D9E22D
+F0 "MCU RTC" 60
+F1 "mcu_rtc.sch" 60
+F2 "RTC_SCL" I L 8300 5550 60 
+F3 "RTC_SDA" B L 8300 5450 60 
+F4 "RTC_MFP" O L 8300 5650 60 
+$EndSheet
+$Sheet
+S 7200 1900 1300 1950
+U 54DAD1C9
+F0 "MCU Shift Registers" 60
+F1 "mch_shift.sch" 60
+F2 "SEL_ZERO" O R 8500 2000 60 
+F3 "SEL_ONE" O R 8500 2100 60 
+F4 "SEL_TWO" O R 8500 2200 60 
+F5 "SEL_THREE" O R 8500 2300 60 
+F6 "SEL_FOUR" O R 8500 2400 60 
+F7 "SEL_FIVE" O R 8500 2500 60 
+F8 "SEL_SIX" O R 8500 2600 60 
+F9 "SEL_SEVEN" O R 8500 2700 60 
+F10 "SEL_EIGHT" O R 8500 2800 60 
+F11 "SEL_NINE" O R 8500 2900 60 
+F12 "SER" I L 7200 2000 60 
+F13 "SRCLK" I L 7200 2100 60 
+F14 "SCLR" I L 7200 2200 60 
+F15 "OE" I L 7200 2300 60 
+F16 "RCLK" I L 7200 2400 60 
+F17 "SEL_DOT_TOP" O R 8500 3000 60 
+F18 "SEL_DOT_BOT" O R 8500 3100 60 
+F19 "SEL_NIX1" O R 8500 3450 60 
+F20 "SEL_NIX2" O R 8500 3550 60 
+F21 "SEL_NIX3" O R 8500 3650 60 
+F22 "SEL_NIX0" O R 8500 3750 60 
+$EndSheet
+Entry Wire Line
+	9350 3200 9250 3100
+Entry Wire Line
+	9350 3100 9250 3000
+Text Label 9200 3000 2    60   ~ 0
+D0
+Text Label 9200 3100 2    60   ~ 0
+D1
+Text HLabel 1850 1900 2    60   Output ~ 0
+SEL_DOT_TOP
+Text HLabel 1850 2000 2    60   Output ~ 0
+SEL_DOT_BOT
+Entry Wire Line
+	1550 1800 1650 1900
+Entry Wire Line
+	1550 1900 1650 2000
+Text Label 1750 1900 2    60   ~ 0
+D0
+Text Label 1750 2000 2    60   ~ 0
+D1
+Text HLabel 5100 4250 2    60   Output ~ 0
+180V_SHTDN
+$Comp
+L SW_LPH_PUSH SW1
+U 1 1 54E28102
+P 3400 5850
+F 0 "SW1" H 3550 5960 50  0000 C CNN
+F 1 "SW_LPH_PUSH" H 3400 5650 50  0000 C CNN
+F 2 "Nixie:LPH" H 3950 5900 60  0000 C CNN
+F 3 "" H 3400 5850 60  0000 C CNN
+	1    3400 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_LPH_PUSH SW2
+U 1 1 54E2863D
+P 3400 6350
+F 0 "SW2" H 3550 6460 50  0000 C CNN
+F 1 "SW_LPH_PUSH" H 3400 6150 50  0000 C CNN
+F 2 "Nixie:LPH" H 3950 6400 60  0000 C CNN
+F 3 "" H 3400 6350 60  0000 C CNN
+	1    3400 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_LPH_PUSH SW3
+U 1 1 54E2867C
+P 3400 6850
+F 0 "SW3" H 3550 6960 50  0000 C CNN
+F 1 "SW_LPH_PUSH" H 3400 6650 50  0000 C CNN
+F 2 "Nixie:LPH" H 3950 6900 60  0000 C CNN
+F 3 "" H 3400 6850 60  0000 C CNN
+	1    3400 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_LPH_PUSH SW4
+U 1 1 54E288B4
+P 3400 7400
+F 0 "SW4" H 3550 7510 50  0000 C CNN
+F 1 "SW_LPH_PUSH" H 3400 7200 50  0000 C CNN
+F 2 "Nixie:LPH" H 3950 7450 60  0000 C CNN
+F 3 "" H 3400 7400 60  0000 C CNN
+	1    3400 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X05 P1
+U 1 1 57592C16
+P 5250 1750
+F 0 "P1" H 5250 2050 50  0000 C CNN
+F 1 "CONN_02X05" H 5250 1450 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_10pins" H 5250 1350 50  0000 C CNN
+F 3 "" H 5250 550 50  0000 C CNN
+	1    5250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR033
+U 1 1 5759B293
+P 6000 2050
+F 0 "#PWR033" H 6000 2050 30  0001 C CNN
+F 1 "GND" H 6000 1980 30  0001 C CNN
+F 2 "" H 6000 2050 60  0000 C CNN
+F 3 "" H 6000 2050 60  0000 C CNN
+	1    6000 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR034
+U 1 1 5759B44B
+P 5800 950
+F 0 "#PWR034" H 5800 910 30  0001 C CNN
+F 1 "+3.3V" H 5800 1060 30  0000 C CNN
+F 2 "" H 5800 950 60  0000 C CNN
+F 3 "" H 5800 950 60  0000 C CNN
+	1    5800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D4
+U 1 1 5759BACE
+P 5800 1200
+F 0 "D4" H 5800 1300 50  0000 C CNN
+F 1 "D" H 5800 1100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-523" H 5800 1200 50  0001 C CNN
+F 3 "" H 5800 1200 50  0000 C CNN
+	1    5800 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R20
+U 1 1 575B9A88
+P 5400 3400
+F 0 "R20" V 5450 3200 40  0000 C CNN
+F 1 "4.7k" V 5407 3401 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 3400 30  0001 C CNN
+F 3 "~" H 5400 3400 30  0000 C CNN
+	1    5400 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R21
+U 1 1 575BBE92
+P 5400 3600
+F 0 "R21" V 5450 3400 40  0000 C CNN
+F 1 "4.7k" V 5407 3601 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 3600 30  0001 C CNN
+F 3 "~" H 5400 3600 30  0000 C CNN
+	1    5400 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C10
+U 1 1 575BFA3B
+P 1250 3350
+F 0 "C10" H 1250 3450 40  0000 L CNN
+F 1 "0.1uF" H 1256 3265 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1288 3200 30  0001 C CNN
+F 3 "~" H 1250 3350 60  0000 C CNN
+	1    1250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-nixie_clock C11
+U 1 1 575BFB24
+P 1500 3350
+F 0 "C11" H 1500 3450 40  0000 L CNN
+F 1 "0.1uF" H 1506 3265 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1538 3200 30  0001 C CNN
+F 3 "~" H 1500 3350 60  0000 C CNN
+	1    1500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R23
+U 1 1 575C3378
+P 7650 4950
+F 0 "R23" V 7700 4750 40  0000 C CNN
+F 1 "10k" V 7657 4951 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 4950 30  0001 C CNN
+F 3 "~" H 7650 4950 30  0000 C CNN
+	1    7650 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R24
+U 1 1 575C3498
+P 7750 4950
+F 0 "R24" V 7800 4750 40  0000 C CNN
+F 1 "10k" V 7757 4951 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7680 4950 30  0001 C CNN
+F 3 "~" H 7750 4950 30  0000 C CNN
+	1    7750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-nixie_clock R25
+U 1 1 575C3594
+P 7850 4950
+F 0 "R25" V 7900 4750 40  0000 C CNN
+F 1 "10k" V 7857 4951 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7780 4950 30  0001 C CNN
+F 3 "~" H 7850 4950 30  0000 C CNN
+	1    7850 4950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5000 1650
+Text Notes 850  6900 0    60   ~ 0
+Connect unused pins to pads
+$Comp
+L +3.3V-RESCUE-nixie_clock #PWR035
+U 1 1 575D8A32
+P 1100 5850
+F 0 "#PWR035" H 1100 5810 30  0001 C CNN
+F 1 "+3.3V" H 1100 5960 30  0000 C CNN
+F 2 "" H 1100 5850 60  0000 C CNN
+F 3 "" H 1100 5850 60  0000 C CNN
+	1    1100 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X06 P3
+U 1 1 575D8CF9
+P 1450 6400
+F 0 "P3" H 1450 6750 50  0000 C CNN
+F 1 "CONN_02X06" H 1450 6050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x06" H 1450 5200 50  0001 C CNN
+F 3 "" H 1450 5200 50  0000 C CNN
+	1    1450 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 575D8FF3
+P 1850 6650
+F 0 "#PWR036" H 1850 6650 30  0001 C CNN
+F 1 "GND" H 1850 6580 30  0001 C CNN
+F 2 "" H 1850 6650 60  0000 C CNN
+F 3 "" H 1850 6650 60  0000 C CNN
+	1    1850 6650
+	0    -1   -1   0   
+$EndComp
+Text Label 4900 3700 0    60   ~ 0
+CYA0
+Text Label 4900 3800 0    60   ~ 0
+CYA1
+Text Label 4900 3950 0    60   ~ 0
+CYA2
+Text Label 4900 4050 0    60   ~ 0
+CYA3
+Text Label 4900 4150 0    60   ~ 0
+CYA4
+Text Label 4900 4700 0    60   ~ 0
+CYA5
+Text Label 4900 4800 0    60   ~ 0
+CYA6
+Text Label 1500 4450 0    60   ~ 0
+CYA7
+Wire Wire Line
+	1000 3000 1000 3150
+Wire Wire Line
+	1000 3100 2050 3100
+Wire Wire Line
+	1250 3100 1250 3150
+Connection ~ 1000 3100
+Wire Wire Line
+	1000 3550 1000 3650
+Wire Wire Line
+	1000 3600 1500 3600
+Wire Wire Line
+	1250 3600 1250 3550
+Connection ~ 1000 3600
+Wire Wire Line
+	1950 3100 1950 3400
+Wire Wire Line
+	1950 3200 2050 3200
+Connection ~ 1950 3100
+Connection ~ 1250 3100
+Wire Wire Line
+	1950 3400 2050 3400
+Connection ~ 1950 3200
+Wire Wire Line
+	1750 3750 1750 3700
+Wire Wire Line
+	1750 3700 2050 3700
+Wire Wire Line
+	1750 4150 1750 4200
+Wire Wire Line
+	2050 5200 1950 5200
+Wire Wire Line
+	1950 5200 1950 5500
+Wire Wire Line
+	2050 5400 1950 5400
+Connection ~ 1950 5400
+Wire Wire Line
+	2050 5300 1950 5300
+Connection ~ 1950 5300
+Wire Notes Line
+	800  600  800  2700
+Wire Notes Line
+	2850 600  2850 2700
+Wire Wire Line
+	3950 4350 6950 4350
+Wire Wire Line
+	3950 4450 6850 4450
+Wire Wire Line
+	3950 4550 5500 4550
+Wire Wire Line
+	3950 4900 6750 4900
+Wire Wire Line
+	6000 4550 6050 4550
+Wire Wire Line
+	5400 4550 5400 5850
+Connection ~ 5400 4550
+Wire Wire Line
+	5550 4750 5400 4750
+Wire Wire Line
+	5950 4750 6100 4750
+Wire Wire Line
+	3100 5850 2950 5850
+Wire Wire Line
+	2950 5850 2950 7550
+Wire Wire Line
+	5400 5850 3700 5850
+Connection ~ 5400 4750
+Wire Wire Line
+	3100 7400 2950 7400
+Wire Wire Line
+	3100 6850 2950 6850
+Wire Wire Line
+	3100 6350 2950 6350
+Connection ~ 2950 6350
+Wire Wire Line
+	3700 6350 4200 6350
+Wire Wire Line
+	4200 6350 4200 5200
+Wire Wire Line
+	4200 5200 3950 5200
+Wire Wire Line
+	3700 6850 4300 6850
+Wire Wire Line
+	4300 6850 4300 5100
+Wire Wire Line
+	4300 5100 3950 5100
+Wire Wire Line
+	3700 7400 4400 7400
+Wire Wire Line
+	4400 7400 4400 5000
+Wire Wire Line
+	4400 5000 3950 5000
+Connection ~ 2950 6850
+Wire Wire Line
+	3950 5300 4600 5300
+Wire Wire Line
+	3950 5400 4600 5400
+Wire Wire Line
+	5100 5300 5450 5300
+Wire Wire Line
+	5100 5400 5850 5400
+Wire Wire Line
+	5850 5300 6350 5300
+Wire Wire Line
+	6350 5200 6350 5400
+Wire Wire Line
+	6350 5400 6250 5400
+Connection ~ 6350 5300
+Wire Wire Line
+	7650 4700 7650 4550
+Wire Wire Line
+	7650 4550 7850 4550
+Wire Wire Line
+	7850 4550 7850 4700
+Wire Wire Line
+	7750 4450 7750 4700
+Connection ~ 7750 4550
+Wire Bus Line
+	1250 750  1550 750 
+Wire Bus Line
+	1550 750  1550 1900
+Wire Bus Line
+	1250 2150 1550 2150
+Wire Bus Line
+	1550 2150 1550 2550
+Wire Wire Line
+	1650 900  1850 900 
+Wire Wire Line
+	1850 1000 1650 1000
+Wire Wire Line
+	1650 1100 1850 1100
+Wire Wire Line
+	1850 1200 1650 1200
+Wire Wire Line
+	1850 1300 1650 1300
+Wire Wire Line
+	1850 1400 1650 1400
+Wire Wire Line
+	1650 1500 1850 1500
+Wire Wire Line
+	1650 1600 1850 1600
+Wire Wire Line
+	1650 1700 1850 1700
+Wire Wire Line
+	1650 1800 1850 1800
+Wire Wire Line
+	1650 2300 1850 2300
+Wire Wire Line
+	1650 2400 1850 2400
+Wire Wire Line
+	1650 2500 1850 2500
+Wire Wire Line
+	1650 2600 1850 2600
+Wire Bus Line
+	9350 1800 9650 1800
+Wire Bus Line
+	9350 1800 9350 3200
+Wire Wire Line
+	8500 2000 9250 2000
+Wire Wire Line
+	8500 2100 9250 2100
+Wire Wire Line
+	8500 2200 9250 2200
+Wire Wire Line
+	8500 2300 9250 2300
+Wire Wire Line
+	8500 2400 9250 2400
+Wire Wire Line
+	8500 2500 9250 2500
+Wire Wire Line
+	8500 2600 9250 2600
+Wire Wire Line
+	8500 2700 9250 2700
+Wire Wire Line
+	8500 2800 9250 2800
+Wire Wire Line
+	8500 2900 9250 2900
+Wire Bus Line
+	9350 3550 9350 3950
+Wire Wire Line
+	8500 3450 9250 3450
+Wire Wire Line
+	8500 3550 9250 3550
+Wire Wire Line
+	8500 3650 9250 3650
+Wire Wire Line
+	8500 3750 9250 3750
+Wire Bus Line
+	9350 3950 9450 3950
+Wire Notes Line
+	2850 2700 800  2700
+Wire Notes Line
+	2850 600  800  600 
+Wire Wire Line
+	6950 4350 6950 5450
+Wire Wire Line
+	6950 5450 8300 5450
+Connection ~ 7650 5450
+Wire Wire Line
+	6850 4450 6850 5550
+Wire Wire Line
+	6850 5550 8300 5550
+Connection ~ 7750 5550
+Wire Wire Line
+	7650 5450 7650 5200
+Wire Wire Line
+	7750 5200 7750 5550
+Wire Wire Line
+	6750 4900 6750 5650
+Wire Wire Line
+	6750 5650 8300 5650
+Wire Wire Line
+	7850 5200 7850 5650
+Connection ~ 7850 5650
+Wire Wire Line
+	8500 3000 9250 3000
+Wire Wire Line
+	8500 3100 9250 3100
+Wire Wire Line
+	1650 1900 1850 1900
+Wire Wire Line
+	1650 2000 1850 2000
+Wire Wire Line
+	3950 4250 5100 4250
+Wire Wire Line
+	3100 5950 3100 5850
+Wire Wire Line
+	3700 5850 3700 5950
+Wire Wire Line
+	3700 6450 3700 6350
+Wire Wire Line
+	3100 6450 3100 6350
+Wire Wire Line
+	3100 6950 3100 6850
+Wire Wire Line
+	3700 6950 3700 6850
+Wire Wire Line
+	3100 7500 3100 7400
+Wire Wire Line
+	3700 7500 3700 7400
+Wire Wire Line
+	6350 2000 7200 2000
+Wire Wire Line
+	6450 2100 7200 2100
+Wire Wire Line
+	6550 2200 7200 2200
+Wire Wire Line
+	6650 2300 7200 2300
+Wire Wire Line
+	6750 2400 7200 2400
+Wire Wire Line
+	5000 1550 4250 1550
+Wire Wire Line
+	3950 3400 5150 3400
+Wire Wire Line
+	4350 1750 5000 1750
+Wire Wire Line
+	5000 1850 4450 1850
+Wire Wire Line
+	4550 1950 5000 1950
+Wire Wire Line
+	3950 3500 4550 3500
+Wire Wire Line
+	5500 1650 5800 1650
+Wire Wire Line
+	5800 1650 5800 2050
+Wire Wire Line
+	5800 1950 5500 1950
+Wire Wire Line
+	5500 1850 5800 1850
+Connection ~ 5800 1850
+Wire Wire Line
+	5500 1750 5800 1750
+Connection ~ 5800 1750
+Wire Wire Line
+	5800 2050 6000 2050
+Connection ~ 5800 1950
+Wire Wire Line
+	5800 1550 5500 1550
+Wire Wire Line
+	5800 1350 5800 1550
+Wire Wire Line
+	4250 1550 4250 3400
+Wire Wire Line
+	4350 1750 4350 4550
+Connection ~ 4350 4550
+Wire Wire Line
+	5800 1050 5800 950 
+Wire Wire Line
+	4450 1850 4450 3600
+Wire Wire Line
+	4550 3500 4550 1950
+Wire Wire Line
+	3950 3600 5150 3600
+Connection ~ 4250 3400
+Connection ~ 4450 3600
+Wire Wire Line
+	6450 3600 5650 3600
+Wire Wire Line
+	6450 2100 6450 3600
+Wire Wire Line
+	6350 3400 5650 3400
+Wire Wire Line
+	6350 3400 6350 2000
+Wire Wire Line
+	3950 3100 6550 3100
+Wire Wire Line
+	6550 3100 6550 2200
+Wire Wire Line
+	3950 3200 6650 3200
+Wire Wire Line
+	6650 3200 6650 2300
+Wire Wire Line
+	3950 3300 6750 3300
+Wire Wire Line
+	6750 3300 6750 2400
+Wire Wire Line
+	1500 3150 1500 3100
+Connection ~ 1500 3100
+Wire Wire Line
+	1500 3600 1500 3550
+Connection ~ 1250 3600
+Wire Wire Line
+	2050 4450 700  4450
+Wire Wire Line
+	1700 6350 2000 6350
+Wire Wire Line
+	1700 6250 2000 6250
+Wire Wire Line
+	750  4550 2050 4550
+Wire Wire Line
+	1200 6150 1100 6150
+Wire Wire Line
+	1100 6150 1100 5850
+Wire Wire Line
+	1700 6650 1850 6650
+Wire Wire Line
+	3950 3800 5150 3800
+Wire Wire Line
+	3950 3700 5150 3700
+Wire Wire Line
+	3950 3950 5150 3950
+Wire Wire Line
+	3950 4050 5150 4050
+Wire Wire Line
+	3950 4150 5150 4150
+Wire Wire Line
+	3950 4700 5150 4700
+Wire Wire Line
+	3950 4800 5150 4800
+Text Label 1500 4550 0    60   ~ 0
+CYA8
+Wire Wire Line
+	800  6250 1200 6250
+Wire Wire Line
+	800  6350 1200 6350
+Wire Wire Line
+	800  6450 1200 6450
+Wire Wire Line
+	800  6550 1200 6550
+Wire Wire Line
+	800  6650 1200 6650
+Wire Wire Line
+	2000 6550 1700 6550
+Wire Wire Line
+	2000 6450 1700 6450
+Text Label 850  6250 0    60   ~ 0
+CYA0
+Text Label 850  6350 0    60   ~ 0
+CYA1
+Text Label 850  6450 0    60   ~ 0
+CYA2
+Text Label 850  6550 0    60   ~ 0
+CYA3
+Text Label 850  6650 0    60   ~ 0
+CYA4
+Text Label 1750 6550 0    60   ~ 0
+CYA5
+Text Label 1750 6450 0    60   ~ 0
+CYA6
+Text Label 1750 6250 0    60   ~ 0
+CYA7
+Text Label 1750 6350 0    60   ~ 0
+CYA8
+NoConn ~ 1700 6150
+$EndSCHEMATC
