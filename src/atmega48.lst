@@ -1,0 +1,844 @@
+
+atmega48.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000356  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000006  00800100  00800100  000003ca  2**0
+                  ALLOC
+  2 .debug_aranges 00000060  00000000  00000000  000003ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 00000117  00000000  00000000  0000042a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000711  00000000  00000000  00000541  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000003fa  00000000  00000000  00000c52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000006f5  00000000  00000000  0000104c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000120  00000000  00000000  00001744  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000001eb  00000000  00000000  00001864  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    0000016e  00000000  00000000  00001a4f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000078  00000000  00000000  00001bbd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	28 c0       	rjmp	.+80     	; 0x54 <__bad_interrupt>
+   4:	27 c0       	rjmp	.+78     	; 0x54 <__bad_interrupt>
+   6:	26 c0       	rjmp	.+76     	; 0x54 <__bad_interrupt>
+   8:	25 c0       	rjmp	.+74     	; 0x54 <__bad_interrupt>
+   a:	24 c0       	rjmp	.+72     	; 0x54 <__bad_interrupt>
+   c:	23 c0       	rjmp	.+70     	; 0x54 <__bad_interrupt>
+   e:	31 c0       	rjmp	.+98     	; 0x72 <__vector_7>
+  10:	21 c0       	rjmp	.+66     	; 0x54 <__bad_interrupt>
+  12:	20 c0       	rjmp	.+64     	; 0x54 <__bad_interrupt>
+  14:	1f c0       	rjmp	.+62     	; 0x54 <__bad_interrupt>
+  16:	1e c0       	rjmp	.+60     	; 0x54 <__bad_interrupt>
+  18:	1d c0       	rjmp	.+58     	; 0x54 <__bad_interrupt>
+  1a:	1c c0       	rjmp	.+56     	; 0x54 <__bad_interrupt>
+  1c:	1b c0       	rjmp	.+54     	; 0x54 <__bad_interrupt>
+  1e:	1a c0       	rjmp	.+52     	; 0x54 <__bad_interrupt>
+  20:	19 c0       	rjmp	.+50     	; 0x54 <__bad_interrupt>
+  22:	18 c0       	rjmp	.+48     	; 0x54 <__bad_interrupt>
+  24:	17 c0       	rjmp	.+46     	; 0x54 <__bad_interrupt>
+  26:	16 c0       	rjmp	.+44     	; 0x54 <__bad_interrupt>
+  28:	15 c0       	rjmp	.+42     	; 0x54 <__bad_interrupt>
+  2a:	14 c0       	rjmp	.+40     	; 0x54 <__bad_interrupt>
+  2c:	13 c0       	rjmp	.+38     	; 0x54 <__bad_interrupt>
+  2e:	12 c0       	rjmp	.+36     	; 0x54 <__bad_interrupt>
+  30:	11 c0       	rjmp	.+34     	; 0x54 <__bad_interrupt>
+  32:	10 c0       	rjmp	.+32     	; 0x54 <__bad_interrupt>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	d2 e0       	ldi	r29, 0x02	; 2
+  3c:	de bf       	out	0x3e, r29	; 62
+  3e:	cd bf       	out	0x3d, r28	; 61
+
+00000040 <__do_clear_bss>:
+  40:	11 e0       	ldi	r17, 0x01	; 1
+  42:	a0 e0       	ldi	r26, 0x00	; 0
+  44:	b1 e0       	ldi	r27, 0x01	; 1
+  46:	01 c0       	rjmp	.+2      	; 0x4a <.do_clear_bss_start>
+
+00000048 <.do_clear_bss_loop>:
+  48:	1d 92       	st	X+, r1
+
+0000004a <.do_clear_bss_start>:
+  4a:	a6 30       	cpi	r26, 0x06	; 6
+  4c:	b1 07       	cpc	r27, r17
+  4e:	e1 f7       	brne	.-8      	; 0x48 <.do_clear_bss_loop>
+  50:	47 d0       	rcall	.+142    	; 0xe0 <main>
+  52:	7f c1       	rjmp	.+766    	; 0x352 <_exit>
+
+00000054 <__bad_interrupt>:
+  54:	d5 cf       	rjmp	.-86     	; 0x0 <__vectors>
+
+00000056 <timer2_init>:
+//			timer2_init
+//initializes timer2 to handle updating measurements
+//
+void timer2_init(void){
+  //TCCR2B |= (1<<CS22)|(1<<CS21)|(1<<CS20); // Cio/1024
+  TCCR2B |= (1<<CS22);                     // Cio/64
+  56:	e1 eb       	ldi	r30, 0xB1	; 177
+  58:	f0 e0       	ldi	r31, 0x00	; 0
+  5a:	80 81       	ld	r24, Z
+  5c:	84 60       	ori	r24, 0x04	; 4
+  5e:	80 83       	st	Z, r24
+  OCR2A = 0x0F;			  	   // Freq ~ 15.6kHz
+  60:	8f e0       	ldi	r24, 0x0F	; 15
+  62:	80 93 b3 00 	sts	0x00B3, r24
+  TIMSK2 |= (1<<OCIE1A);		   // Enable interrupt
+  66:	e0 e7       	ldi	r30, 0x70	; 112
+  68:	f0 e0       	ldi	r31, 0x00	; 0
+  6a:	80 81       	ld	r24, Z
+  6c:	82 60       	ori	r24, 0x02	; 2
+  6e:	80 83       	st	Z, r24
+}
+  70:	08 95       	ret
+
+00000072 <__vector_7>:
+//*******************************************************
+
+//*******************************************************
+//			Timer 2 Interrupt
+// 
+ISR(TIMER2_COMPA_vect){
+  72:	1f 92       	push	r1
+  74:	0f 92       	push	r0
+  76:	0f b6       	in	r0, 0x3f	; 63
+  78:	0f 92       	push	r0
+  7a:	11 24       	eor	r1, r1
+
+ 
+ 
+}
+  7c:	0f 90       	pop	r0
+  7e:	0f be       	out	0x3f, r0	; 63
+  80:	0f 90       	pop	r0
+  82:	1f 90       	pop	r1
+  84:	18 95       	reti
+
+00000086 <chk_button>:
+//
+uint8_t chk_button(uint8_t button) {
+  static uint16_t state[3] = {0,0,0}; //holds present state for 3 seperate buttons
+  uint8_t switch_bit = PD3;
+  
+  switch(button){
+  86:	81 30       	cpi	r24, 0x01	; 1
+  88:	11 f1       	breq	.+68     	; 0xce <chk_button+0x48>
+  8a:	82 30       	cpi	r24, 0x02	; 2
+  8c:	19 f1       	breq	.+70     	; 0xd4 <chk_button+0x4e>
+  8e:	43 e0       	ldi	r20, 0x03	; 3
+  90:	50 e0       	ldi	r21, 0x00	; 0
+		case(2):
+			switch_bit = PD5;
+			break;
+  }
+  
+  state[button] = (state[button] << 1) | (! bit_is_clear(PIND, switch_bit)) | 0xE000;
+  92:	e8 2f       	mov	r30, r24
+  94:	f0 e0       	ldi	r31, 0x00	; 0
+  96:	29 b1       	in	r18, 0x09	; 9
+  98:	ee 0f       	add	r30, r30
+  9a:	ff 1f       	adc	r31, r31
+  9c:	e0 50       	subi	r30, 0x00	; 0
+  9e:	ff 4f       	sbci	r31, 0xFF	; 255
+  a0:	80 81       	ld	r24, Z
+  a2:	91 81       	ldd	r25, Z+1	; 0x01
+  a4:	88 0f       	add	r24, r24
+  a6:	99 1f       	adc	r25, r25
+  a8:	90 6e       	ori	r25, 0xE0	; 224
+  aa:	30 e0       	ldi	r19, 0x00	; 0
+  ac:	02 c0       	rjmp	.+4      	; 0xb2 <chk_button+0x2c>
+  ae:	35 95       	asr	r19
+  b0:	27 95       	ror	r18
+  b2:	4a 95       	dec	r20
+  b4:	e2 f7       	brpl	.-8      	; 0xae <chk_button+0x28>
+  b6:	21 70       	andi	r18, 0x01	; 1
+  b8:	30 70       	andi	r19, 0x00	; 0
+  ba:	82 2b       	or	r24, r18
+  bc:	93 2b       	or	r25, r19
+  be:	91 83       	std	Z+1, r25	; 0x01
+  c0:	80 83       	st	Z, r24
+  c2:	20 e0       	ldi	r18, 0x00	; 0
+  c4:	80 50       	subi	r24, 0x00	; 0
+  c6:	90 4f       	sbci	r25, 0xF0	; 240
+  c8:	41 f0       	breq	.+16     	; 0xda <chk_button+0x54>
+  if (state[button] == 0xF000) return 1;
+  return 0;
+}
+  ca:	82 2f       	mov	r24, r18
+  cc:	08 95       	ret
+//
+uint8_t chk_button(uint8_t button) {
+  static uint16_t state[3] = {0,0,0}; //holds present state for 3 seperate buttons
+  uint8_t switch_bit = PD3;
+  
+  switch(button){
+  ce:	44 e0       	ldi	r20, 0x04	; 4
+  d0:	50 e0       	ldi	r21, 0x00	; 0
+  d2:	df cf       	rjmp	.-66     	; 0x92 <chk_button+0xc>
+  d4:	45 e0       	ldi	r20, 0x05	; 5
+  d6:	50 e0       	ldi	r21, 0x00	; 0
+  d8:	dc cf       	rjmp	.-72     	; 0x92 <chk_button+0xc>
+		case(2):
+			switch_bit = PD5;
+			break;
+  }
+  
+  state[button] = (state[button] << 1) | (! bit_is_clear(PIND, switch_bit)) | 0xE000;
+  da:	21 e0       	ldi	r18, 0x01	; 1
+  if (state[button] == 0xF000) return 1;
+  return 0;
+}
+  dc:	82 2f       	mov	r24, r18
+  de:	08 95       	ret
+
+000000e0 <main>:
+//******************************************************************************
+
+
+//*******************************************************
+uint8_t main(void){
+  e0:	ef 92       	push	r14
+  e2:	ff 92       	push	r15
+  e4:	1f 93       	push	r17
+  e6:	cf 93       	push	r28
+  e8:	df 93       	push	r29
+	uint8_t read_data;
+	uint8_t i;
+	
+	//Button
+	DDRD |= (1<<PD6) | (1<<PD7); // Set PD6 and PD7 as outputs
+  ea:	8a b1       	in	r24, 0x0a	; 10
+  ec:	80 6c       	ori	r24, 0xC0	; 192
+  ee:	8a b9       	out	0x0a, r24	; 10
+	DDRD &= ~(1<<PD3); // SW4
+  f0:	53 98       	cbi	0x0a, 3	; 10
+	DDRD &= ~(1<<PD4); // SW3
+  f2:	54 98       	cbi	0x0a, 4	; 10
+	DDRD &= ~(1<<PD5); // SW2
+  f4:	55 98       	cbi	0x0a, 5	; 10
+	PORTD |= (1<<PD3) | (1<<PD4) | (1<<PD5); //enable pullups
+  f6:	8b b1       	in	r24, 0x0b	; 11
+  f8:	88 63       	ori	r24, 0x38	; 56
+  fa:	8b b9       	out	0x0b, r24	; 11
+	PORTD |= (1<<PD6); 		//keep LEDs off to start
+  fc:	5e 9a       	sbi	0x0b, 6	; 11
+	PORTD |= (1<<PD7); 		//keep LEDs off to start
+  fe:	5f 9a       	sbi	0x0b, 7	; 11
+  
+
+	twi_init();
+ 100:	55 d0       	rcall	.+170    	; 0x1ac <twi_init>
+	spi_init_master();
+ 102:	e2 d0       	rcall	.+452    	; 0x2c8 <spi_init_master>
+//			timer2_init
+//initializes timer2 to handle updating measurements
+//
+void timer2_init(void){
+  //TCCR2B |= (1<<CS22)|(1<<CS21)|(1<<CS20); // Cio/1024
+  TCCR2B |= (1<<CS22);                     // Cio/64
+ 104:	80 91 b1 00 	lds	r24, 0x00B1
+ 108:	84 60       	ori	r24, 0x04	; 4
+ 10a:	80 93 b1 00 	sts	0x00B1, r24
+  OCR2A = 0x0F;			  	   // Freq ~ 15.6kHz
+ 10e:	8f e0       	ldi	r24, 0x0F	; 15
+ 110:	80 93 b3 00 	sts	0x00B3, r24
+  TIMSK2 |= (1<<OCIE1A);		   // Enable interrupt
+ 114:	80 91 70 00 	lds	r24, 0x0070
+ 118:	82 60       	ori	r24, 0x02	; 2
+ 11a:	80 93 70 00 	sts	0x0070, r24
+
+	// temp_control_init();  
+
+	// sei(); 
+	
+	write_rtc(0x00, 0x80); // Initialize the RTC oscillator
+ 11e:	80 e0       	ldi	r24, 0x00	; 0
+ 120:	60 e8       	ldi	r22, 0x80	; 128
+ 122:	77 d0       	rcall	.+238    	; 0x212 <write_rtc>
+
+    set_tubes(0, 0, FALSE);
+ 124:	80 e0       	ldi	r24, 0x00	; 0
+ 126:	60 e0       	ldi	r22, 0x00	; 0
+ 128:	40 e0       	ldi	r20, 0x00	; 0
+ 12a:	d9 d0       	rcall	.+434    	; 0x2de <set_tubes>
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 12c:	c0 e2       	ldi	r28, 0x20	; 32
+ 12e:	de e4       	ldi	r29, 0x4E	; 78
+
+	while(TRUE){
+		
+		// Wait for button press before begining I2C command seq
+		while(!chk_button(1)){
+ 130:	81 e0       	ldi	r24, 0x01	; 1
+ 132:	a9 df       	rcall	.-174    	; 0x86 <chk_button>
+ 134:	88 23       	and	r24, r24
+ 136:	91 f1       	breq	.+100    	; 0x19c <main+0xbc>
+			_delay_us(10000);
+		}
+		
+		read_data=read_rtc(0x01); // Read the minutes
+ 138:	81 e0       	ldi	r24, 0x01	; 1
+ 13a:	90 d0       	rcall	.+288    	; 0x25c <read_rtc>
+ 13c:	10 e0       	ldi	r17, 0x00	; 0
+ 13e:	e8 2e       	mov	r14, r24
+ 140:	ff 24       	eor	r15, r15
+ 142:	03 c0       	rjmp	.+6      	; 0x14a <main+0x6a>
+ 144:	ce 01       	movw	r24, r28
+ 146:	01 97       	sbiw	r24, 0x01	; 1
+ 148:	f1 f7       	brne	.-4      	; 0x146 <main+0x66>
+
+		for(i=0; i<8; i++){
+			
+			// Wait for button press
+			while(!chk_button(0)){
+ 14a:	80 e0       	ldi	r24, 0x00	; 0
+ 14c:	9c df       	rcall	.-200    	; 0x86 <chk_button>
+ 14e:	88 23       	and	r24, r24
+ 150:	c9 f3       	breq	.-14     	; 0x144 <main+0x64>
+				_delay_us(10000);
+			}
+			
+			// Send out next bit on LED
+			if(read_data>>i & 0x01){
+ 152:	c7 01       	movw	r24, r14
+ 154:	01 2e       	mov	r0, r17
+ 156:	02 c0       	rjmp	.+4      	; 0x15c <main+0x7c>
+ 158:	95 95       	asr	r25
+ 15a:	87 95       	ror	r24
+ 15c:	0a 94       	dec	r0
+ 15e:	e2 f7       	brpl	.-8      	; 0x158 <main+0x78>
+ 160:	80 ff       	sbrs	r24, 0
+ 162:	0c c0       	rjmp	.+24     	; 0x17c <main+0x9c>
+				PORTD &= ~(1<<PD6);	
+ 164:	5e 98       	cbi	0x0b, 6	; 11
+			}
+			else{
+				PORTD |= (1<<PD6);	
+			}
+			
+            set_tubes(2, i, FALSE);
+ 166:	82 e0       	ldi	r24, 0x02	; 2
+ 168:	61 2f       	mov	r22, r17
+ 16a:	40 e0       	ldi	r20, 0x00	; 0
+ 16c:	b8 d0       	rcall	.+368    	; 0x2de <set_tubes>
+			// Turn on second LED on last bit
+			if(i==7){
+ 16e:	17 30       	cpi	r17, 0x07	; 7
+ 170:	61 f0       	breq	.+24     	; 0x18a <main+0xaa>
+				PORTD &= ~(1<<PD7);	
+                set_tubes(2, i, TRUE);
+			}
+			// Turn off Second LED on first bit
+			else if(i==0){
+ 172:	11 23       	and	r17, r17
+ 174:	b9 f4       	brne	.+46     	; 0x1a4 <main+0xc4>
+				PORTD |= (1<<PD7);	
+ 176:	5f 9a       	sbi	0x0b, 7	; 11
+ 178:	11 e0       	ldi	r17, 0x01	; 1
+ 17a:	e7 cf       	rjmp	.-50     	; 0x14a <main+0x6a>
+			// Send out next bit on LED
+			if(read_data>>i & 0x01){
+				PORTD &= ~(1<<PD6);	
+			}
+			else{
+				PORTD |= (1<<PD6);	
+ 17c:	5e 9a       	sbi	0x0b, 6	; 11
+			}
+			
+            set_tubes(2, i, FALSE);
+ 17e:	82 e0       	ldi	r24, 0x02	; 2
+ 180:	61 2f       	mov	r22, r17
+ 182:	40 e0       	ldi	r20, 0x00	; 0
+ 184:	ac d0       	rcall	.+344    	; 0x2de <set_tubes>
+			// Turn on second LED on last bit
+			if(i==7){
+ 186:	17 30       	cpi	r17, 0x07	; 7
+ 188:	a1 f7       	brne	.-24     	; 0x172 <main+0x92>
+				PORTD &= ~(1<<PD7);	
+ 18a:	5f 98       	cbi	0x0b, 7	; 11
+                set_tubes(2, i, TRUE);
+ 18c:	82 e0       	ldi	r24, 0x02	; 2
+ 18e:	67 e0       	ldi	r22, 0x07	; 7
+ 190:	41 e0       	ldi	r20, 0x01	; 1
+ 192:	a5 d0       	rcall	.+330    	; 0x2de <set_tubes>
+    set_tubes(0, 0, FALSE);
+
+	while(TRUE){
+		
+		// Wait for button press before begining I2C command seq
+		while(!chk_button(1)){
+ 194:	81 e0       	ldi	r24, 0x01	; 1
+ 196:	77 df       	rcall	.-274    	; 0x86 <chk_button>
+ 198:	88 23       	and	r24, r24
+ 19a:	71 f6       	brne	.-100    	; 0x138 <main+0x58>
+ 19c:	ce 01       	movw	r24, r28
+ 19e:	01 97       	sbiw	r24, 0x01	; 1
+ 1a0:	f1 f7       	brne	.-4      	; 0x19e <main+0xbe>
+ 1a2:	c6 cf       	rjmp	.-116    	; 0x130 <main+0x50>
+			_delay_us(10000);
+		}
+		
+		read_data=read_rtc(0x01); // Read the minutes
+
+		for(i=0; i<8; i++){
+ 1a4:	1f 5f       	subi	r17, 0xFF	; 255
+ 1a6:	18 30       	cpi	r17, 0x08	; 8
+ 1a8:	80 f2       	brcs	.-96     	; 0x14a <main+0x6a>
+ 1aa:	c2 cf       	rjmp	.-124    	; 0x130 <main+0x50>
+
+000001ac <twi_init>:
+#define WRITE_RTC 0b11011110
+
+void twi_init(void)
+{
+    //set SCL to 200kHz
+    TWSR = 0x00;
+ 1ac:	10 92 b9 00 	sts	0x00B9, r1
+    TWBR = 0x0C;
+ 1b0:	8c e0       	ldi	r24, 0x0C	; 12
+ 1b2:	80 93 b8 00 	sts	0x00B8, r24
+    //enable TWI
+    TWCR = (1<<TWEN);
+ 1b6:	84 e0       	ldi	r24, 0x04	; 4
+ 1b8:	80 93 bc 00 	sts	0x00BC, r24
+}
+ 1bc:	08 95       	ret
+
+000001be <twi_start>:
+
+// send a start signal
+void twi_start(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
+ 1be:	84 ea       	ldi	r24, 0xA4	; 164
+ 1c0:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 1c4:	80 91 bc 00 	lds	r24, 0x00BC
+ 1c8:	87 ff       	sbrs	r24, 7
+ 1ca:	fc cf       	rjmp	.-8      	; 0x1c4 <twi_start+0x6>
+}
+ 1cc:	08 95       	ret
+
+000001ce <twi_stop>:
+
+//send stop signal
+void twi_stop(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);
+ 1ce:	84 e9       	ldi	r24, 0x94	; 148
+ 1d0:	80 93 bc 00 	sts	0x00BC, r24
+}
+ 1d4:	08 95       	ret
+
+000001d6 <twi_write>:
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 1d6:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 1da:	84 e8       	ldi	r24, 0x84	; 132
+ 1dc:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 1e0:	80 91 bc 00 	lds	r24, 0x00BC
+ 1e4:	87 ff       	sbrs	r24, 7
+ 1e6:	fc cf       	rjmp	.-8      	; 0x1e0 <twi_write+0xa>
+}
+ 1e8:	08 95       	ret
+
+000001ea <twi_read_ack>:
+
+//read byte with ACK
+uint8_t twi_read_ack(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA);
+ 1ea:	84 ec       	ldi	r24, 0xC4	; 196
+ 1ec:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 1f0:	80 91 bc 00 	lds	r24, 0x00BC
+ 1f4:	87 ff       	sbrs	r24, 7
+ 1f6:	fc cf       	rjmp	.-8      	; 0x1f0 <twi_read_ack+0x6>
+    return TWDR;
+ 1f8:	80 91 bb 00 	lds	r24, 0x00BB
+}
+ 1fc:	08 95       	ret
+
+000001fe <twi_read_nack>:
+
+//read byte with NACK
+uint8_t twi_read_nack(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 1fe:	84 e8       	ldi	r24, 0x84	; 132
+ 200:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 204:	80 91 bc 00 	lds	r24, 0x00BC
+ 208:	87 ff       	sbrs	r24, 7
+ 20a:	fc cf       	rjmp	.-8      	; 0x204 <twi_read_nack+0x6>
+    return TWDR;
+ 20c:	80 91 bb 00 	lds	r24, 0x00BB
+}
+ 210:	08 95       	ret
+
+00000212 <write_rtc>:
+
+
+/********************write_rtc*************************/
+// Write a value to the RTC
+//
+void write_rtc(uint8_t addr, uint8_t data){
+ 212:	98 2f       	mov	r25, r24
+}
+
+// send a start signal
+void twi_start(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
+ 214:	84 ea       	ldi	r24, 0xA4	; 164
+ 216:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 21a:	80 91 bc 00 	lds	r24, 0x00BC
+ 21e:	87 ff       	sbrs	r24, 7
+ 220:	fc cf       	rjmp	.-8      	; 0x21a <write_rtc+0x8>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 222:	8e ed       	ldi	r24, 0xDE	; 222
+ 224:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 228:	84 e8       	ldi	r24, 0x84	; 132
+ 22a:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 22e:	80 91 bc 00 	lds	r24, 0x00BC
+ 232:	87 ff       	sbrs	r24, 7
+ 234:	fc cf       	rjmp	.-8      	; 0x22e <write_rtc+0x1c>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 236:	90 93 bb 00 	sts	0x00BB, r25
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 23a:	84 e8       	ldi	r24, 0x84	; 132
+ 23c:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 240:	80 91 bc 00 	lds	r24, 0x00BC
+ 244:	87 ff       	sbrs	r24, 7
+ 246:	fc cf       	rjmp	.-8      	; 0x240 <write_rtc+0x2e>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 248:	60 93 bb 00 	sts	0x00BB, r22
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 24c:	84 e8       	ldi	r24, 0x84	; 132
+ 24e:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 252:	80 91 bc 00 	lds	r24, 0x00BC
+ 256:	87 ff       	sbrs	r24, 7
+ 258:	fc cf       	rjmp	.-8      	; 0x252 <write_rtc+0x40>
+	twi_start();
+	twi_write(WRITE_RTC); // Send command to read from address
+	twi_write(addr); // Send address of part number
+	twi_write(data); // Send command to read data
+
+}
+ 25a:	08 95       	ret
+
+0000025c <read_rtc>:
+/**************************************************************/
+
+/********************read_rtc*************************/
+// Read from the RTC SRAM
+//
+uint8_t read_rtc(uint8_t addr){
+ 25c:	98 2f       	mov	r25, r24
+}
+
+// send a start signal
+void twi_start(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
+ 25e:	84 ea       	ldi	r24, 0xA4	; 164
+ 260:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 264:	80 91 bc 00 	lds	r24, 0x00BC
+ 268:	87 ff       	sbrs	r24, 7
+ 26a:	fc cf       	rjmp	.-8      	; 0x264 <read_rtc+0x8>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 26c:	8e ed       	ldi	r24, 0xDE	; 222
+ 26e:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 272:	84 e8       	ldi	r24, 0x84	; 132
+ 274:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 278:	80 91 bc 00 	lds	r24, 0x00BC
+ 27c:	87 ff       	sbrs	r24, 7
+ 27e:	fc cf       	rjmp	.-8      	; 0x278 <read_rtc+0x1c>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 280:	90 93 bb 00 	sts	0x00BB, r25
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 284:	84 e8       	ldi	r24, 0x84	; 132
+ 286:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 28a:	80 91 bc 00 	lds	r24, 0x00BC
+ 28e:	87 ff       	sbrs	r24, 7
+ 290:	fc cf       	rjmp	.-8      	; 0x28a <read_rtc+0x2e>
+}
+
+// send a start signal
+void twi_start(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
+ 292:	84 ea       	ldi	r24, 0xA4	; 164
+ 294:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 298:	80 91 bc 00 	lds	r24, 0x00BC
+ 29c:	87 ff       	sbrs	r24, 7
+ 29e:	fc cf       	rjmp	.-8      	; 0x298 <read_rtc+0x3c>
+}
+
+// write to the RTC
+void twi_write(uint8_t u8data)
+{
+    TWDR = u8data;
+ 2a0:	8f ed       	ldi	r24, 0xDF	; 223
+ 2a2:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 2a6:	84 e8       	ldi	r24, 0x84	; 132
+ 2a8:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 2ac:	80 91 bc 00 	lds	r24, 0x00BC
+ 2b0:	87 ff       	sbrs	r24, 7
+ 2b2:	fc cf       	rjmp	.-8      	; 0x2ac <read_rtc+0x50>
+}
+
+//read byte with NACK
+uint8_t twi_read_nack(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWEN);
+ 2b4:	84 e8       	ldi	r24, 0x84	; 132
+ 2b6:	80 93 bc 00 	sts	0x00BC, r24
+    while ((TWCR & (1<<TWINT)) == 0);
+ 2ba:	80 91 bc 00 	lds	r24, 0x00BC
+ 2be:	87 ff       	sbrs	r24, 7
+ 2c0:	fc cf       	rjmp	.-8      	; 0x2ba <read_rtc+0x5e>
+    return TWDR;
+ 2c2:	80 91 bb 00 	lds	r24, 0x00BB
+	twi_write(addr); // Send address of part number
+	twi_start();
+	twi_write(READ_RTC); // Send command to read data
+	return twi_read_nack();
+
+}
+ 2c6:	08 95       	ret
+
+000002c8 <spi_init_master>:
+
+// Initialize SPI Master Device (without interrupt)
+void spi_init_master (void)
+{
+    // Set MOSI, SCK, SCLR_N, OE_N, and RCLK as Output
+    DDRB |= (1<<SER)|(1<<SRCLK)|(1<<SCLR_N)|(1<<OE_N)|(1<<RCLK);
+ 2c8:	84 b1       	in	r24, 0x04	; 4
+ 2ca:	8f 62       	ori	r24, 0x2F	; 47
+ 2cc:	84 b9       	out	0x04, r24	; 4
+
+    // Enable SHTDN function
+    DDRC |= (1<<SHTDN);
+ 2ce:	3b 9a       	sbi	0x07, 3	; 7
+    PORTC |= (1<<SHTDN);
+ 2d0:	43 9a       	sbi	0x08, 3	; 8
+ 
+    // Enable SPI, Set as Master
+    //Prescaler: Fosc/16, disable Interrupts
+    SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
+ 2d2:	81 e5       	ldi	r24, 0x51	; 81
+ 2d4:	8c bd       	out	0x2c, r24	; 44
+
+    PORTB |= (1<<SCLR_N); // Disable CLR
+ 2d6:	28 9a       	sbi	0x05, 0	; 5
+    PORTB |= (1<<OE_N);   // Disable output initially
+ 2d8:	29 9a       	sbi	0x05, 1	; 5
+
+    // Enable power supply
+    PORTC &= ~(1<<SHTDN);
+ 2da:	43 98       	cbi	0x08, 3	; 8
+}
+ 2dc:	08 95       	ret
+
+000002de <set_tubes>:
+// Set the different annondes/cathodes
+//
+//Function to send and receive data for both master and slave
+void set_tubes (uint8_t nix_sel, uint8_t digit, uint8_t colon_en)
+{
+    uint8_t dot = (colon_en == TRUE) ? (0x3 << 2) : 0x00;
+ 2de:	41 30       	cpi	r20, 0x01	; 1
+ 2e0:	89 f1       	breq	.+98     	; 0x344 <__stack+0x45>
+ 2e2:	50 e0       	ldi	r21, 0x00	; 0
+    uint8_t annode = (nix_sel == 0) ? 0x00 : ((1<<(nix_sel-1)) << 4);
+ 2e4:	88 23       	and	r24, r24
+ 2e6:	f9 f4       	brne	.+62     	; 0x326 <__stack+0x27>
+ 2e8:	40 e0       	ldi	r20, 0x00	; 0
+    uint8_t upper = 0;
+    uint8_t lower = 0;
+
+    PORTB &= ~(1<<RCLK); // make sure parallel clock is low
+ 2ea:	2a 98       	cbi	0x05, 2	; 5
+    PORTB |= (1<<OE_N);  // Disable output initially
+ 2ec:	29 9a       	sbi	0x05, 1	; 5
+
+    upper =  annode | dot | ((1<<digit >> 8));
+ 2ee:	21 e0       	ldi	r18, 0x01	; 1
+ 2f0:	30 e0       	ldi	r19, 0x00	; 0
+ 2f2:	02 c0       	rjmp	.+4      	; 0x2f8 <set_tubes+0x1a>
+ 2f4:	22 0f       	add	r18, r18
+ 2f6:	33 1f       	adc	r19, r19
+ 2f8:	6a 95       	dec	r22
+ 2fa:	e2 f7       	brpl	.-8      	; 0x2f4 <set_tubes+0x16>
+ 2fc:	45 2b       	or	r20, r21
+ 2fe:	83 2f       	mov	r24, r19
+ 300:	99 27       	eor	r25, r25
+ 302:	87 fd       	sbrc	r24, 7
+ 304:	9a 95       	dec	r25
+ 306:	48 2b       	or	r20, r24
+//
+//Function to send and receive data for both master and slave
+void write_shift_reg (uint8_t data)
+{
+    // Load data into the buffer
+    SPDR = data;
+ 308:	4e bd       	out	0x2e, r20	; 46
+ 
+    //Wait until transmission complete
+    while(!(SPSR & (1<<SPIF) ));
+ 30a:	0d b4       	in	r0, 0x2d	; 45
+ 30c:	07 fe       	sbrs	r0, 7
+ 30e:	fd cf       	rjmp	.-6      	; 0x30a <__stack+0xb>
+//
+//Function to send and receive data for both master and slave
+void write_shift_reg (uint8_t data)
+{
+    // Load data into the buffer
+    SPDR = data;
+ 310:	2e bd       	out	0x2e, r18	; 46
+ 
+    //Wait until transmission complete
+    while(!(SPSR & (1<<SPIF) ));
+ 312:	0d b4       	in	r0, 0x2d	; 45
+ 314:	07 fe       	sbrs	r0, 7
+ 316:	fd cf       	rjmp	.-6      	; 0x312 <__stack+0x13>
+    lower = ((1<<digit)&0xFF);
+
+    write_shift_reg(upper);
+    write_shift_reg(lower);
+
+    PORTB |= (1<<RCLK); // create rising edge on parallel clock
+ 318:	2a 9a       	sbi	0x05, 2	; 5
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+ 31a:	8a e1       	ldi	r24, 0x1A	; 26
+ 31c:	8a 95       	dec	r24
+ 31e:	f1 f7       	brne	.-4      	; 0x31c <__stack+0x1d>
+    _delay_us(10);
+    PORTB &= ~(1<<RCLK); // toggle parallel clock low
+ 320:	2a 98       	cbi	0x05, 2	; 5
+
+    PORTB &= ~(1<<OE_N); // enable output
+ 322:	29 98       	cbi	0x05, 1	; 5
+}
+ 324:	08 95       	ret
+//
+//Function to send and receive data for both master and slave
+void set_tubes (uint8_t nix_sel, uint8_t digit, uint8_t colon_en)
+{
+    uint8_t dot = (colon_en == TRUE) ? (0x3 << 2) : 0x00;
+    uint8_t annode = (nix_sel == 0) ? 0x00 : ((1<<(nix_sel-1)) << 4);
+ 326:	28 2f       	mov	r18, r24
+ 328:	30 e0       	ldi	r19, 0x00	; 0
+ 32a:	21 50       	subi	r18, 0x01	; 1
+ 32c:	30 40       	sbci	r19, 0x00	; 0
+ 32e:	81 e0       	ldi	r24, 0x01	; 1
+ 330:	90 e0       	ldi	r25, 0x00	; 0
+ 332:	02 c0       	rjmp	.+4      	; 0x338 <__stack+0x39>
+ 334:	88 0f       	add	r24, r24
+ 336:	99 1f       	adc	r25, r25
+ 338:	2a 95       	dec	r18
+ 33a:	e2 f7       	brpl	.-8      	; 0x334 <__stack+0x35>
+ 33c:	48 2f       	mov	r20, r24
+ 33e:	42 95       	swap	r20
+ 340:	40 7f       	andi	r20, 0xF0	; 240
+ 342:	d3 cf       	rjmp	.-90     	; 0x2ea <set_tubes+0xc>
+// Set the different annondes/cathodes
+//
+//Function to send and receive data for both master and slave
+void set_tubes (uint8_t nix_sel, uint8_t digit, uint8_t colon_en)
+{
+    uint8_t dot = (colon_en == TRUE) ? (0x3 << 2) : 0x00;
+ 344:	5c e0       	ldi	r21, 0x0C	; 12
+ 346:	ce cf       	rjmp	.-100    	; 0x2e4 <set_tubes+0x6>
+
+00000348 <write_shift_reg>:
+//
+//Function to send and receive data for both master and slave
+void write_shift_reg (uint8_t data)
+{
+    // Load data into the buffer
+    SPDR = data;
+ 348:	8e bd       	out	0x2e, r24	; 46
+ 
+    //Wait until transmission complete
+    while(!(SPSR & (1<<SPIF) ));
+ 34a:	0d b4       	in	r0, 0x2d	; 45
+ 34c:	07 fe       	sbrs	r0, 7
+ 34e:	fd cf       	rjmp	.-6      	; 0x34a <write_shift_reg+0x2>
+}
+ 350:	08 95       	ret
+
+00000352 <_exit>:
+ 352:	f8 94       	cli
+
+00000354 <__stop_program>:
+ 354:	ff cf       	rjmp	.-2      	; 0x354 <__stop_program>

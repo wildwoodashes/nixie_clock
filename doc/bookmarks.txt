@@ -3,3 +3,9 @@ High Voltage Work
 // --------------------- 
 High Voltage Creepage (Trace spacing): http://www.creepage.com/
 Pollution factor: http://www.ni.com/white-paper/2871/en/
+
+
+// --------------------- 
+Microcontroller (Atmega48)
+// --------------------- 
+http://www.engbedded.com/fusecalc/
