@@ -74,7 +74,10 @@ uint8_t chk_button(uint8_t button) {
 //*******************************************************
 uint8_t main(void){
 	uint8_t read_data;
-	uint8_t i;
+	uint8_t minutes;
+    uint8_t hours;
+	uint8_t i = 0;
+    uint8_t dot = 0;
 	
 	//Button
 	DDRD |= (1<<PD6) | (1<<PD7); // Set PD6 and PD7 as outputs
@@ -84,30 +87,41 @@ uint8_t main(void){
 	PORTD |= (1<<PD3) | (1<<PD4) | (1<<PD5); //enable pullups
 	PORTD |= (1<<PD6); 		//keep LEDs off to start
 	PORTD |= (1<<PD7); 		//keep LEDs off to start
-  
+
+	PORTD &= ~(1<<PD6);
+	PORTD &= ~(1<<PD7);
 
 	twi_init();
 	spi_init_master();
-	timer2_init();
-	// adc_init();
-
-	// tlc5940_init();
-
-	// temp_control_init();  
+	// timer2_init();
 
 	// sei(); 
 	
-	write_rtc(0x00, 0x80); // Initialize the RTC oscillator
+	// write_rtc(0x00, 0x80)  ; // Initialize the RTC oscillator
+	// write_rtc(0x02, (1<<5)); // Set the hours to 12;
 
     set_tubes(0, 0, FALSE);
 
+    PORTC |= (1<<PC3);
+
 	while(TRUE){
 		
+		// read_data=read_rtc(0x01); // Read the minutes
+        // minutes = (read_data>>4)*10+(read_data&0x0F);
+
+		// read_data=read_rtc(0x02); // Read the hours
+        // hours = ((read_data>>4)&0x1)*10+(read_data&0x0F);
+
 		// Wait for button press before begining I2C command seq
-		while(!chk_button(1)){
+		while(!chk_button(0)){
 			_delay_us(10000);
 		}
-		
+        // i++;
+        // dot = (minutes%2==0) ? FALSE : TRUE;
+        set_tubes(i%5, (minutes%10), dot);
+        PORTD ^= (1<<PD7);	
+
+        /*
 		read_data=read_rtc(0x01); // Read the minutes
 
 		for(i=0; i<8; i++){
@@ -138,6 +152,7 @@ uint8_t main(void){
 
 			
 		}
+        */
 
 	}
 	return 0;

@@ -117,7 +117,7 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x356
+.text           0x00000000      0x2e4
  *(.vectors)
  .vectors       0x00000000       0x34 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm48.o
                 0x00000000                __vectors
@@ -196,35 +196,35 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
                 0x00000054                __vector_16
                 0x00000054                __vector_18
                 0x00000054                __vector_20
- .text          0x00000056      0x156 atmega48.o
+ .text          0x00000056       0xe4 atmega48.o
                 0x00000056                timer2_init
                 0x00000072                __vector_7
                 0x000000e0                main
                 0x00000086                chk_button
- .text          0x000001ac      0x11c rtc.o
-                0x000001fe                twi_read_nack
-                0x000001ac                twi_init
-                0x00000212                write_rtc
-                0x000001d6                twi_write
-                0x0000025c                read_rtc
-                0x000001be                twi_start
-                0x000001ce                twi_stop
-                0x000001ea                twi_read_ack
- .text          0x000002c8       0x8a tubes.o
-                0x00000348                write_shift_reg
-                0x000002de                set_tubes
-                0x000002c8                spi_init_master
- .text          0x00000352        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
- .text          0x00000352        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
-                0x00000352                . = ALIGN (0x2)
+ .text          0x0000013a      0x11c rtc.o
+                0x0000018c                twi_read_nack
+                0x0000013a                twi_init
+                0x000001a0                write_rtc
+                0x00000164                twi_write
+                0x000001ea                read_rtc
+                0x0000014c                twi_start
+                0x0000015c                twi_stop
+                0x00000178                twi_read_ack
+ .text          0x00000256       0x8a tubes.o
+                0x000002d6                write_shift_reg
+                0x0000026c                set_tubes
+                0x00000256                spi_init_master
+ .text          0x000002e0        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text          0x000002e0        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                0x000002e0                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00000352        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
- .text.libgcc   0x00000352        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
-                0x00000352                . = ALIGN (0x2)
+ .text.libgcc   0x000002e0        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x000002e0        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                0x000002e0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000352        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
-                0x00000352                exit
-                0x00000352                _exit
+ .fini9         0x000002e0        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                0x000002e0                exit
+                0x000002e0                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -243,11 +243,11 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000352        0x4 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .fini0         0x000002e0        0x4 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000356                _etext = .
+                0x000002e4                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000356
+.data           0x00800100        0x0 load address 0x000002e4
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm48.o
@@ -276,8 +276,8 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
  *(.bss*)
  *(COMMON)
                 0x00800106                PROVIDE (__bss_end, .)
-                0x00000356                __data_load_start = LOADADDR (.data)
-                0x00000356                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000002e4                __data_load_start = LOADADDR (.data)
+                0x000002e4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800106        0x0
                 0x00800106                PROVIDE (__noinit_start, .)
@@ -354,24 +354,24 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
  .debug_pubnames
                 0x000000cf       0x48 tubes.o
 
-.debug_info     0x00000000      0x711
+.debug_info     0x00000000      0x6c3
  *(.debug_info)
- .debug_info    0x00000000      0x283 atmega48.o
- .debug_info    0x00000283      0x244 rtc.o
- .debug_info    0x000004c7      0x24a tubes.o
+ .debug_info    0x00000000      0x235 atmega48.o
+ .debug_info    0x00000235      0x244 rtc.o
+ .debug_info    0x00000479      0x24a tubes.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x3fa
+.debug_abbrev   0x00000000      0x3a4
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x168 atmega48.o
- .debug_abbrev  0x00000168      0x14e rtc.o
- .debug_abbrev  0x000002b6      0x144 tubes.o
+ .debug_abbrev  0x00000000      0x112 atmega48.o
+ .debug_abbrev  0x00000112      0x14e rtc.o
+ .debug_abbrev  0x00000260      0x144 tubes.o
 
-.debug_line     0x00000000      0x6f5
+.debug_line     0x00000000      0x685
  *(.debug_line)
- .debug_line    0x00000000      0x295 atmega48.o
- .debug_line    0x00000295      0x268 rtc.o
- .debug_line    0x000004fd      0x1f8 tubes.o
+ .debug_line    0x00000000      0x225 atmega48.o
+ .debug_line    0x00000225      0x268 rtc.o
+ .debug_line    0x0000048d      0x1f8 tubes.o
 
 .debug_frame    0x00000000      0x120
  *(.debug_frame)
@@ -379,20 +379,20 @@ LOAD c:/users/alex/documents/tools/winavr/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
  .debug_frame   0x00000050       0x90 rtc.o
  .debug_frame   0x000000e0       0x40 tubes.o
 
-.debug_str      0x00000000      0x1eb
+.debug_str      0x00000000      0x1f9
  *(.debug_str)
- .debug_str     0x00000000      0x129 atmega48.o
-                                0x164 (size before relaxing)
- .debug_str     0x00000129       0x66 rtc.o
+ .debug_str     0x00000000      0x137 atmega48.o
+                                0x172 (size before relaxing)
+ .debug_str     0x00000137       0x66 rtc.o
                                 0x11b (size before relaxing)
- .debug_str     0x0000018f       0x5c tubes.o
+ .debug_str     0x0000019d       0x5c tubes.o
                                 0x171 (size before relaxing)
 
-.debug_loc      0x00000000      0x16e
+.debug_loc      0x00000000      0x156
  *(.debug_loc)
- .debug_loc     0x00000000       0x5e atmega48.o
- .debug_loc     0x0000005e       0x4f rtc.o
- .debug_loc     0x000000ad       0xc1 tubes.o
+ .debug_loc     0x00000000       0x46 atmega48.o
+ .debug_loc     0x00000046       0x4f rtc.o
+ .debug_loc     0x00000095       0xc1 tubes.o
 
 .debug_macinfo
  *(.debug_macinfo)
