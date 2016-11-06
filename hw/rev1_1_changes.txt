@@ -1,0 +1,34 @@
+1.  DC-Power jack is mirrored and needs to be flipped to other side
+2.  Re-pinout switches and move to backside of board
+3.  Rotate switches so they face outward.
+4.  Re-evaluate reset switch location
+5.  3.3V DC-DC converter footprint is wrong
+6.  NPN/PNP pintout is flipped
+7.  Tube Annode circuit needs additional resistor between base of PNP and collector of NPN
+8.  Add 3.3V indicator LED
+9.  Use NPN+voltage divider to drive 170V indicator LED
+10. Increase neon-indicator resistor to 100kOhms/AT LEAST 1/8W (preferably 1/4W)
+11. Check tube annode resistor's power rating (needs to be AT LEAST 1/8W)
+12. Increase NPN collector resistance to 200K (check this in SPICE) and increase power rating to 1/4W
+13. Correct silkscreen for battery clip
+14. Fix nixie tube footprint and flip to other side (THIS SHOULD NOT CHANGE THE ACTUAL LAYOUT!!!!!)
+15. Rotate neon indicators so negative terminal is outward (negative terminal is illuminated)
+
+-------------------------------------------
+Parts to be re-used:
+22. power-jack ($1.14)
+23. Cable ends ($2.08)
+24. MCP7904 ($0.89)
+25. Battery clip ($1.07)
+28. Crystal ($0.43)
+30. 3.3V caps ($0.88)
+31. 0.1Ohm ($0.38)
+33. Programmer diode (0.50)
+34. Fuse ($0.39)
+40. 68uF cap ($2.78)
+41. 47uF caps ($3.30)
+43. Ribbon cable ($0.62)
+
+New BOM: $39.25
+Savings: $13.57 
+Replacement BOM: ($24.79)

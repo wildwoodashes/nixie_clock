@@ -1,0 +1,577 @@
+EESchema Schematic File Version 2
+LIBS:tube_shield-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:nixie_lib
+LIBS:nixie_clock-rescue
+LIBS:tube_shield-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title "Tube Shield"
+Date "2016-09-14"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L K155ID1 U1
+U 1 1 5802B631
+P 3500 2750
+F 0 "U1" H 3500 2400 60  0000 C CNN
+F 1 "K155ID1" H 3500 3550 60  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 3500 2200 60  0000 C CNN
+F 3 "" H 3500 2800 60  0000 C CNN
+	1    3500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR014
+U 1 1 5802B96E
+P 1300 2300
+F 0 "#PWR014" H 1300 2150 50  0001 C CNN
+F 1 "+5V" H 1300 2440 50  0000 C CNN
+F 2 "" H 1300 2300 50  0000 C CNN
+F 3 "" H 1300 2300 50  0000 C CNN
+	1    1300 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5802BA82
+P 1300 2850
+F 0 "C2" H 1325 2950 50  0000 L CNN
+F 1 "0.1u" H 1325 2750 50  0000 L CNN
+F 2 "" H 1338 2700 50  0000 C CNN
+F 3 "" H 1300 2850 50  0000 C CNN
+	1    1300 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 5802BB18
+P 1300 3100
+F 0 "#PWR015" H 1300 2850 50  0001 C CNN
+F 1 "GND" H 1300 2950 50  0000 C CNN
+F 2 "" H 1300 3100 50  0000 C CNN
+F 3 "" H 1300 3100 50  0000 C CNN
+	1    1300 3100
+	1    0    0    -1  
+$EndComp
+Text HLabel 2450 2400 0    60   Input ~ 0
+N0_SEL_A
+Text HLabel 2450 2700 0    60   Input ~ 0
+N0_SEL_B
+Text HLabel 2450 2800 0    60   Input ~ 0
+N0_SEL_C
+Text HLabel 2450 2500 0    60   Input ~ 0
+N0_SEL_D
+Wire Wire Line
+	3000 2600 1300 2600
+Wire Wire Line
+	1300 2300 1300 2700
+Connection ~ 1300 2600
+Wire Wire Line
+	1300 3000 1300 3100
+Wire Wire Line
+	3000 2700 2450 2700
+Wire Wire Line
+	3000 2800 2450 2800
+Wire Wire Line
+	3000 2500 2450 2500
+Wire Wire Line
+	3000 2400 2450 2400
+Wire Wire Line
+	3950 2600 4150 2600
+$Comp
+L GND #PWR016
+U 1 1 5802CA66
+P 4150 2600
+F 0 "#PWR016" H 4150 2350 50  0001 C CNN
+F 1 "GND" H 4150 2450 50  0000 C CNN
+F 2 "" H 4150 2600 50  0000 C CNN
+F 3 "" H 4150 2600 50  0000 C CNN
+	1    4150 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 2200 4800 2200
+Wire Wire Line
+	3950 2300 4800 2300
+Wire Wire Line
+	3000 2900 2700 2900
+Wire Wire Line
+	2700 2900 2700 3200
+Wire Wire Line
+	2700 3200 4800 3200
+Wire Wire Line
+	3950 2900 4800 2900
+Wire Wire Line
+	3950 2800 4800 2800
+Wire Wire Line
+	3950 2700 4800 2700
+Wire Wire Line
+	3950 2500 4800 2500
+Wire Wire Line
+	3950 2400 4800 2400
+Wire Wire Line
+	3000 2300 2800 2300
+Wire Wire Line
+	2800 2300 2800 1750
+Wire Wire Line
+	2800 1750 4800 1750
+Wire Wire Line
+	3000 2200 2900 2200
+Wire Wire Line
+	2900 2200 2900 1850
+Wire Wire Line
+	2900 1850 4800 1850
+Text HLabel 4800 1750 2    60   Output ~ 0
+N0_CAT_9
+Text HLabel 4800 1850 2    60   Output ~ 0
+N0_CAT_8
+Text HLabel 4800 2200 2    60   Output ~ 0
+N0_CAT_0
+Text HLabel 4800 2300 2    60   Output ~ 0
+N0_CAT_1
+Text HLabel 4800 2400 2    60   Output ~ 0
+N0_CAT_5
+Text HLabel 4800 2500 2    60   Output ~ 0
+N0_CAT_4
+Text HLabel 4800 2700 2    60   Output ~ 0
+N0_CAT_6
+Text HLabel 4800 2800 2    60   Output ~ 0
+N0_CAT_7
+Text HLabel 4800 2900 2    60   Output ~ 0
+N0_CAT_3
+Text HLabel 4800 3200 2    60   Output ~ 0
+N0_CAT_2
+$Comp
+L K155ID1 U2
+U 1 1 5802F26E
+P 8050 2700
+F 0 "U2" H 8050 2350 60  0000 C CNN
+F 1 "K155ID1" H 8050 3500 60  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 8050 2100 60  0000 C CNN
+F 3 "" H 8050 2750 60  0000 C CNN
+	1    8050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR017
+U 1 1 5802F274
+P 5850 2250
+F 0 "#PWR017" H 5850 2100 50  0001 C CNN
+F 1 "+5V" H 5850 2390 50  0000 C CNN
+F 2 "" H 5850 2250 50  0000 C CNN
+F 3 "" H 5850 2250 50  0000 C CNN
+	1    5850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 5802F27A
+P 5850 2800
+F 0 "C3" H 5875 2900 50  0000 L CNN
+F 1 "0.1u" H 5875 2700 50  0000 L CNN
+F 2 "" H 5888 2650 50  0000 C CNN
+F 3 "" H 5850 2800 50  0000 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 5802F280
+P 5850 3050
+F 0 "#PWR018" H 5850 2800 50  0001 C CNN
+F 1 "GND" H 5850 2900 50  0000 C CNN
+F 2 "" H 5850 3050 50  0000 C CNN
+F 3 "" H 5850 3050 50  0000 C CNN
+	1    5850 3050
+	1    0    0    -1  
+$EndComp
+Text HLabel 7000 2350 0    60   Input ~ 0
+N1_SEL_A
+Text HLabel 7000 2650 0    60   Input ~ 0
+N1_SEL_B
+Text HLabel 7000 2750 0    60   Input ~ 0
+N1_SEL_C
+Text HLabel 7000 2450 0    60   Input ~ 0
+N1_SEL_D
+Wire Wire Line
+	7550 2550 5850 2550
+Wire Wire Line
+	5850 2250 5850 2650
+Connection ~ 5850 2550
+Wire Wire Line
+	5850 2950 5850 3050
+Wire Wire Line
+	7550 2650 7000 2650
+Wire Wire Line
+	7550 2750 7000 2750
+Wire Wire Line
+	7550 2450 7000 2450
+Wire Wire Line
+	7550 2350 7000 2350
+Wire Wire Line
+	8500 2550 8700 2550
+$Comp
+L GND #PWR019
+U 1 1 5802F298
+P 8700 2550
+F 0 "#PWR019" H 8700 2300 50  0001 C CNN
+F 1 "GND" H 8700 2400 50  0000 C CNN
+F 2 "" H 8700 2550 50  0000 C CNN
+F 3 "" H 8700 2550 50  0000 C CNN
+	1    8700 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 2150 9350 2150
+Wire Wire Line
+	8500 2250 9350 2250
+Wire Wire Line
+	7550 2850 7250 2850
+Wire Wire Line
+	7250 2850 7250 3150
+Wire Wire Line
+	7250 3150 9350 3150
+Wire Wire Line
+	8500 2850 9350 2850
+Wire Wire Line
+	8500 2750 9350 2750
+Wire Wire Line
+	8500 2650 9350 2650
+Wire Wire Line
+	8500 2450 9350 2450
+Wire Wire Line
+	8500 2350 9350 2350
+Wire Wire Line
+	7550 2250 7350 2250
+Wire Wire Line
+	7350 2250 7350 1700
+Wire Wire Line
+	7350 1700 9350 1700
+Wire Wire Line
+	7550 2150 7450 2150
+Wire Wire Line
+	7450 2150 7450 1800
+Wire Wire Line
+	7450 1800 9350 1800
+Text HLabel 9350 1700 2    60   Output ~ 0
+N1_CAT_9
+Text HLabel 9350 1800 2    60   Output ~ 0
+N1_CAT_8
+Text HLabel 9350 2150 2    60   Output ~ 0
+N1_CAT_0
+Text HLabel 9350 2250 2    60   Output ~ 0
+N1_CAT_1
+Text HLabel 9350 2350 2    60   Output ~ 0
+N1_CAT_5
+Text HLabel 9350 2450 2    60   Output ~ 0
+N1_CAT_4
+Text HLabel 9350 2650 2    60   Output ~ 0
+N1_CAT_6
+Text HLabel 9350 2750 2    60   Output ~ 0
+N1_CAT_7
+Text HLabel 9350 2850 2    60   Output ~ 0
+N1_CAT_3
+Text HLabel 9350 3150 2    60   Output ~ 0
+N1_CAT_2
+$Comp
+L K155ID1 U3
+U 1 1 5802F31E
+P 3400 5050
+F 0 "U3" H 3400 4700 60  0000 C CNN
+F 1 "K155ID1" H 3400 5850 60  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 3400 4450 60  0000 C CNN
+F 3 "" H 3400 5100 60  0000 C CNN
+	1    3400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR020
+U 1 1 5802F324
+P 1200 4600
+F 0 "#PWR020" H 1200 4450 50  0001 C CNN
+F 1 "+5V" H 1200 4740 50  0000 C CNN
+F 2 "" H 1200 4600 50  0000 C CNN
+F 3 "" H 1200 4600 50  0000 C CNN
+	1    1200 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5802F32A
+P 1200 5150
+F 0 "C1" H 1225 5250 50  0000 L CNN
+F 1 "0.1u" H 1225 5050 50  0000 L CNN
+F 2 "" H 1238 5000 50  0000 C CNN
+F 3 "" H 1200 5150 50  0000 C CNN
+	1    1200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 5802F330
+P 1200 5400
+F 0 "#PWR021" H 1200 5150 50  0001 C CNN
+F 1 "GND" H 1200 5250 50  0000 C CNN
+F 2 "" H 1200 5400 50  0000 C CNN
+F 3 "" H 1200 5400 50  0000 C CNN
+	1    1200 5400
+	1    0    0    -1  
+$EndComp
+Text HLabel 2350 4700 0    60   Input ~ 0
+N2_SEL_A
+Text HLabel 2350 5000 0    60   Input ~ 0
+N2_SEL_B
+Text HLabel 2350 5100 0    60   Input ~ 0
+N2_SEL_C
+Text HLabel 2350 4800 0    60   Input ~ 0
+N2_SEL_D
+Wire Wire Line
+	2900 4900 1200 4900
+Wire Wire Line
+	1200 4600 1200 5000
+Connection ~ 1200 4900
+Wire Wire Line
+	1200 5300 1200 5400
+Wire Wire Line
+	2900 5000 2350 5000
+Wire Wire Line
+	2900 5100 2350 5100
+Wire Wire Line
+	2900 4800 2350 4800
+Wire Wire Line
+	2900 4700 2350 4700
+Wire Wire Line
+	3850 4900 4050 4900
+$Comp
+L GND #PWR022
+U 1 1 5802F348
+P 4050 4900
+F 0 "#PWR022" H 4050 4650 50  0001 C CNN
+F 1 "GND" H 4050 4750 50  0000 C CNN
+F 2 "" H 4050 4900 50  0000 C CNN
+F 3 "" H 4050 4900 50  0000 C CNN
+	1    4050 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 4500 4700 4500
+Wire Wire Line
+	3850 4600 4700 4600
+Wire Wire Line
+	2900 5200 2600 5200
+Wire Wire Line
+	2600 5200 2600 5500
+Wire Wire Line
+	2600 5500 4700 5500
+Wire Wire Line
+	3850 5200 4700 5200
+Wire Wire Line
+	3850 5100 4700 5100
+Wire Wire Line
+	3850 5000 4700 5000
+Wire Wire Line
+	3850 4800 4700 4800
+Wire Wire Line
+	3850 4700 4700 4700
+Wire Wire Line
+	2900 4600 2700 4600
+Wire Wire Line
+	2700 4600 2700 4050
+Wire Wire Line
+	2700 4050 4700 4050
+Wire Wire Line
+	2900 4500 2800 4500
+Wire Wire Line
+	2800 4500 2800 4150
+Wire Wire Line
+	2800 4150 4700 4150
+Text HLabel 4700 4050 2    60   Output ~ 0
+N2_CAT_9
+Text HLabel 4700 4150 2    60   Output ~ 0
+N2_CAT_8
+Text HLabel 4700 4500 2    60   Output ~ 0
+N2_CAT_0
+Text HLabel 4700 4600 2    60   Output ~ 0
+N2_CAT_1
+Text HLabel 4700 4700 2    60   Output ~ 0
+N2_CAT_5
+Text HLabel 4700 4800 2    60   Output ~ 0
+N2_CAT_4
+Text HLabel 4700 5000 2    60   Output ~ 0
+N2_CAT_6
+Text HLabel 4700 5100 2    60   Output ~ 0
+N2_CAT_7
+Text HLabel 4700 5200 2    60   Output ~ 0
+N2_CAT_3
+Text HLabel 4700 5500 2    60   Output ~ 0
+N2_CAT_2
+$Comp
+L K155ID1 U4
+U 1 1 5802F3C6
+P 8050 5050
+F 0 "U4" H 8050 4700 60  0000 C CNN
+F 1 "K155ID1" H 8050 5850 60  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 8050 4450 60  0000 C CNN
+F 3 "" H 8050 5100 60  0000 C CNN
+	1    8050 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR023
+U 1 1 5802F3CC
+P 5850 4600
+F 0 "#PWR023" H 5850 4450 50  0001 C CNN
+F 1 "+5V" H 5850 4740 50  0000 C CNN
+F 2 "" H 5850 4600 50  0000 C CNN
+F 3 "" H 5850 4600 50  0000 C CNN
+	1    5850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 5802F3D2
+P 5850 5150
+F 0 "C4" H 5875 5250 50  0000 L CNN
+F 1 "0.1u" H 5875 5050 50  0000 L CNN
+F 2 "" H 5888 5000 50  0000 C CNN
+F 3 "" H 5850 5150 50  0000 C CNN
+	1    5850 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR024
+U 1 1 5802F3D8
+P 5850 5400
+F 0 "#PWR024" H 5850 5150 50  0001 C CNN
+F 1 "GND" H 5850 5250 50  0000 C CNN
+F 2 "" H 5850 5400 50  0000 C CNN
+F 3 "" H 5850 5400 50  0000 C CNN
+	1    5850 5400
+	1    0    0    -1  
+$EndComp
+Text HLabel 7000 4700 0    60   Input ~ 0
+N3_SEL_A
+Text HLabel 7000 5000 0    60   Input ~ 0
+N3_SEL_B
+Text HLabel 7000 5100 0    60   Input ~ 0
+N3_SEL_C
+Text HLabel 7000 4800 0    60   Input ~ 0
+N3_SEL_D
+Wire Wire Line
+	7550 4900 5850 4900
+Wire Wire Line
+	5850 4600 5850 5000
+Connection ~ 5850 4900
+Wire Wire Line
+	5850 5300 5850 5400
+Wire Wire Line
+	7550 5000 7000 5000
+Wire Wire Line
+	7550 5100 7000 5100
+Wire Wire Line
+	7550 4800 7000 4800
+Wire Wire Line
+	7550 4700 7000 4700
+Wire Wire Line
+	8500 4900 8700 4900
+$Comp
+L GND #PWR025
+U 1 1 5802F3F0
+P 8700 4900
+F 0 "#PWR025" H 8700 4650 50  0001 C CNN
+F 1 "GND" H 8700 4750 50  0000 C CNN
+F 2 "" H 8700 4900 50  0000 C CNN
+F 3 "" H 8700 4900 50  0000 C CNN
+	1    8700 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 4500 9350 4500
+Wire Wire Line
+	8500 4600 9350 4600
+Wire Wire Line
+	7550 5200 7250 5200
+Wire Wire Line
+	7250 5200 7250 5500
+Wire Wire Line
+	7250 5500 9350 5500
+Wire Wire Line
+	8500 5200 9350 5200
+Wire Wire Line
+	8500 5100 9350 5100
+Wire Wire Line
+	8500 5000 9350 5000
+Wire Wire Line
+	8500 4800 9350 4800
+Wire Wire Line
+	8500 4700 9350 4700
+Wire Wire Line
+	7550 4600 7350 4600
+Wire Wire Line
+	7350 4600 7350 4050
+Wire Wire Line
+	7350 4050 9350 4050
+Wire Wire Line
+	7550 4500 7450 4500
+Wire Wire Line
+	7450 4500 7450 4150
+Wire Wire Line
+	7450 4150 9350 4150
+Text HLabel 9350 4050 2    60   Output ~ 0
+N3_CAT_9
+Text HLabel 9350 4150 2    60   Output ~ 0
+N3_CAT_8
+Text HLabel 9350 4500 2    60   Output ~ 0
+N3_CAT_0
+Text HLabel 9350 4600 2    60   Output ~ 0
+N3_CAT_1
+Text HLabel 9350 4700 2    60   Output ~ 0
+N3_CAT_5
+Text HLabel 9350 4800 2    60   Output ~ 0
+N3_CAT_4
+Text HLabel 9350 5000 2    60   Output ~ 0
+N3_CAT_6
+Text HLabel 9350 5100 2    60   Output ~ 0
+N3_CAT_7
+Text HLabel 9350 5200 2    60   Output ~ 0
+N3_CAT_3
+Text HLabel 9350 5500 2    60   Output ~ 0
+N3_CAT_2
+$EndSCHEMATC
