@@ -21,6 +21,12 @@ $CMP CONN_01X03
 D Connector 01x03
 $ENDCMP
 #
+$CMP MMBTA42
+D Vce 300V, Ic 500mA, NPN High Voltage Transistor, TO-92
+K NPN High Voltage Transistor
+F http://www.onsemi.com/pub_link/Collateral/MPSA42-D.PDF
+$ENDCMP
+#
 $CMP SW_LPH_PUSH
 D Push Button
 K Switch

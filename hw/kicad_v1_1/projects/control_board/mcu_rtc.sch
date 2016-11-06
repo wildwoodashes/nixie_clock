@@ -252,17 +252,6 @@ F 3 "" H 5750 3500 60  0000 C CNN
 	1    5750 3500
 	1    0    0    -1  
 $EndComp
-$Comp
-L +3.3V #PWR036
-U 1 1 575E35A4
-P 6600 2700
-F 0 "#PWR036" H 6600 2550 50  0001 C CNN
-F 1 "+3.3V" H 6600 2840 50  0000 C CNN
-F 2 "" H 6600 2700 50  0000 C CNN
-F 3 "" H 6600 2700 50  0000 C CNN
-	1    6600 2700
-	1    0    0    -1  
-$EndComp
 NoConn ~ 4100 4800
 $Comp
 L D_Schottky_x2_ACom_KKA D6
@@ -289,4 +278,15 @@ Wire Wire Line
 Wire Wire Line
 	4400 4600 3250 4600
 Connection ~ 3250 4600
+$Comp
+L +5V #PWR?
+U 1 1 581F2E8E
+P 6600 2700
+F 0 "#PWR?" H 6600 2550 50  0001 C CNN
+F 1 "+5V" H 6600 2840 50  0000 C CNN
+F 2 "" H 6600 2700 50  0000 C CNN
+F 3 "" H 6600 2700 50  0000 C CNN
+	1    6600 2700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

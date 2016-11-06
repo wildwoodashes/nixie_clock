@@ -113,14 +113,6 @@ Wire Wire Line
 	3000 2500 2450 2500
 Wire Wire Line
 	3000 2400 2450 2400
-Text Label 2750 2400 0    60   ~ 0
-N0_A
-Text Label 2750 2500 0    60   ~ 0
-N0_D
-Text Label 2750 2700 0    60   ~ 0
-N0_B
-Text Label 2750 2800 0    60   ~ 0
-N0_C
 Wire Wire Line
 	3950 2600 4150 2600
 $Comp
@@ -253,14 +245,6 @@ Wire Wire Line
 	7550 2450 7000 2450
 Wire Wire Line
 	7550 2350 7000 2350
-Text Label 7300 2350 0    60   ~ 0
-N0_A
-Text Label 7300 2450 0    60   ~ 0
-N0_D
-Text Label 7300 2650 0    60   ~ 0
-N0_B
-Text Label 7300 2750 0    60   ~ 0
-N0_C
 Wire Wire Line
 	8500 2550 8700 2550
 $Comp
@@ -393,14 +377,6 @@ Wire Wire Line
 	2900 4800 2350 4800
 Wire Wire Line
 	2900 4700 2350 4700
-Text Label 2650 4700 0    60   ~ 0
-N0_A
-Text Label 2650 4800 0    60   ~ 0
-N0_D
-Text Label 2650 5000 0    60   ~ 0
-N0_B
-Text Label 2650 5100 0    60   ~ 0
-N0_C
 Wire Wire Line
 	3850 4900 4050 4900
 $Comp
@@ -533,14 +509,6 @@ Wire Wire Line
 	7550 4800 7000 4800
 Wire Wire Line
 	7550 4700 7000 4700
-Text Label 7300 4700 0    60   ~ 0
-N0_A
-Text Label 7300 4800 0    60   ~ 0
-N0_D
-Text Label 7300 5000 0    60   ~ 0
-N0_B
-Text Label 7300 5100 0    60   ~ 0
-N0_C
 Wire Wire Line
 	8500 4900 8700 4900
 $Comp

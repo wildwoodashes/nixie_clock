@@ -25,6 +25,10 @@ $CMP CONN_02X12
 D Connector 02x12
 $ENDCMP
 #
+$CMP CONN_02X12_isolate_hv
+D Connector 02x12
+$ENDCMP
+#
 $CMP SW_LPH_PUSH
 D Push Button
 K Switch

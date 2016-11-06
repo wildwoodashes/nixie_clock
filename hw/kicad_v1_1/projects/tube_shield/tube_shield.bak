@@ -367,13 +367,13 @@ Wire Wire Line
 Wire Wire Line
 	1900 3000 1200 3000
 Text Label 1250 2700 0    60   ~ 0
-N0_SEL_A
+N3_SEL_A
 Text Label 1250 2800 0    60   ~ 0
-N0_SEL_B
+N3_SEL_B
 Text Label 1250 2900 0    60   ~ 0
-N0_SEL_C
+N3_SEL_C
 Text Label 1250 3000 0    60   ~ 0
-N0_SEL_D
+N3_SEL_D
 $Comp
 L +180V #PWR04
 U 1 1 580447F3
@@ -394,13 +394,13 @@ Wire Wire Line
 Wire Wire Line
 	3100 3000 2400 3000
 Text Label 2450 2700 0    60   ~ 0
-N1_SEL_A
+N2_SEL_A
 Text Label 2450 2800 0    60   ~ 0
-N1_SEL_B
+N2_SEL_B
 Text Label 2450 2900 0    60   ~ 0
-N1_SEL_C
+N2_SEL_C
 Text Label 2450 3000 0    60   ~ 0
-N1_SEL_D
+N2_SEL_D
 Wire Wire Line
 	1900 3100 1200 3100
 Wire Wire Line
@@ -410,13 +410,13 @@ Wire Wire Line
 Wire Wire Line
 	1900 3400 1200 3400
 Text Label 1250 3100 0    60   ~ 0
-N2_SEL_A
+N0_SEL_A
 Text Label 1250 3200 0    60   ~ 0
-N2_SEL_B
+N0_SEL_B
 Text Label 1250 3300 0    60   ~ 0
-N2_SEL_C
+N0_SEL_C
 Text Label 1250 3400 0    60   ~ 0
-N2_SEL_D
+N0_SEL_D
 Wire Wire Line
 	800  3600 800  3550
 Wire Wire Line
@@ -428,44 +428,41 @@ Wire Wire Line
 Wire Wire Line
 	3100 3400 2400 3400
 Text Label 2450 3100 0    60   ~ 0
-N3_SEL_A
+N1_SEL_A
 Text Label 2450 3200 0    60   ~ 0
-N3_SEL_B
+N1_SEL_B
 Text Label 2450 3300 0    60   ~ 0
-N3_SEL_C
+N1_SEL_C
 Text Label 2450 3400 0    60   ~ 0
-N3_SEL_D
+N1_SEL_D
 Wire Wire Line
-	1900 3500 1200 3500
-Text Label 1250 3500 0    60   ~ 0
+	3100 3500 2400 3500
+Text Label 2450 3500 0    60   ~ 0
 COL_SEL
 Wire Wire Line
-	2400 3500 3650 3500
-Wire Wire Line
-	3400 3500 3400 3300
+	1050 2650 1050 3500
 $Comp
 L +5V #PWR05
 U 1 1 580473A8
-P 3400 3300
-F 0 "#PWR05" H 3400 3150 50  0001 C CNN
-F 1 "+5V" H 3400 3440 50  0000 C CNN
-F 2 "" H 3400 3300 50  0000 C CNN
-F 3 "" H 3400 3300 50  0000 C CNN
-	1    3400 3300
+P 1050 2650
+F 0 "#PWR05" H 1050 2500 50  0001 C CNN
+F 1 "+5V" H 1050 2790 50  0000 C CNN
+F 2 "" H 1050 2650 50  0000 C CNN
+F 3 "" H 1050 2650 50  0000 C CNN
+	1    1050 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L PWR_FLAG #FLG06
 U 1 1 5804751F
-P 3650 3500
-F 0 "#FLG06" H 3650 3595 50  0001 C CNN
-F 1 "PWR_FLAG" H 3650 3680 50  0000 C CNN
-F 2 "" H 3650 3500 50  0000 C CNN
-F 3 "" H 3650 3500 50  0000 C CNN
-	1    3650 3500
+P 800 3150
+F 0 "#FLG06" H 800 3245 50  0001 C CNN
+F 1 "PWR_FLAG" H 800 3330 50  0000 C CNN
+F 2 "" H 800 3150 50  0000 C CNN
+F 3 "" H 800 3150 50  0000 C CNN
+	1    800  3150
 	1    0    0    -1  
 $EndComp
-Connection ~ 3400 3500
 Wire Wire Line
 	6450 1150 7100 1150
 Wire Wire Line
@@ -546,4 +543,11 @@ Wire Wire Line
 	6450 4950 7100 4950
 Wire Wire Line
 	6450 5050 7100 5050
+Wire Wire Line
+	1050 3500 1900 3500
+Wire Wire Line
+	800  3150 800  3250
+Wire Wire Line
+	800  3250 1050 3250
+Connection ~ 1050 3250
 $EndSCHEMATC
