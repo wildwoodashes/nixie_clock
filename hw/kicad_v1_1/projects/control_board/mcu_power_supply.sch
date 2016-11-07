@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 3 6
 Title "Control Board"
 Date "2016-09-14"
 Rev "1.0"

@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 6 6
 Title "Control Board"
 Date "2016-09-14"
 Rev "1.0"
@@ -246,41 +246,9 @@ NoConn ~ 8450 4100
 Wire Wire Line
 	3550 3150 3750 3150
 Wire Wire Line
-	3550 2300 3550 2500
-Wire Wire Line
-	3550 2500 3550 3150
+	3550 2300 3550 3150
 Wire Bus Line
-	9650 2150 9650 2700
-Wire Bus Line
-	9650 2700 9650 2800
-Wire Bus Line
-	9650 2800 9650 2900
-Wire Bus Line
-	9650 2900 9650 3000
-Wire Bus Line
-	9650 3000 9650 3100
-Wire Bus Line
-	9650 3100 9650 3200
-Wire Bus Line
-	9650 3200 9650 3300
-Wire Bus Line
-	9650 3300 9650 3400
-Wire Bus Line
-	9650 3400 9650 3500
-Wire Bus Line
-	9650 3500 9650 3600
-Wire Bus Line
-	9650 3600 9650 3700
-Wire Bus Line
-	9650 3700 9650 3800
-Wire Bus Line
-	9650 3800 9650 3900
-Wire Bus Line
-	9650 3900 9650 4000
-Wire Bus Line
-	9650 4000 9650 4100
-Wire Bus Line
-	9650 4100 9650 4200
+	9650 2150 9650 4200
 Wire Wire Line
 	9750 2800 10250 2800
 Wire Wire Line
@@ -308,9 +276,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 3350 7050 3350
 Wire Wire Line
-	2400 3450 3250 3450
-Wire Wire Line
-	3250 3450 3750 3450
+	2400 3450 3750 3450
 Wire Wire Line
 	3250 3450 3250 4900
 Wire Wire Line
@@ -320,9 +286,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 3500 7050 3500
 Wire Wire Line
-	2400 3550 3300 3550
-Wire Wire Line
-	3300 3550 3750 3550
+	2400 3550 3750 3550
 Wire Wire Line
 	3300 3550 3300 4850
 Wire Wire Line
@@ -332,9 +296,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 3600 7050 3600
 Wire Wire Line
-	2400 3750 3350 3750
-Wire Wire Line
-	3350 3750 3750 3750
+	2400 3750 3750 3750
 Wire Wire Line
 	3350 3750 3350 4800
 Wire Wire Line
@@ -344,9 +306,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 3800 7050 3800
 Wire Wire Line
-	2400 3850 3400 3850
-Wire Wire Line
-	3400 3850 3750 3850
+	2400 3850 3750 3850
 Wire Wire Line
 	3400 3850 3400 4750
 Wire Wire Line
@@ -370,43 +330,11 @@ Connection ~ 3300 3550
 Connection ~ 3350 3750
 Connection ~ 3400 3850
 Wire Bus Line
-	5500 2150 5500 3050
-Wire Bus Line
-	5500 3050 5500 3150
-Wire Bus Line
-	5500 3150 5500 3250
-Wire Bus Line
-	5500 3250 5500 3350
-Wire Bus Line
-	5500 3350 5500 3450
-Wire Bus Line
-	5500 3450 5500 3550
-Wire Bus Line
-	5500 3550 5500 3650
-Wire Bus Line
-	5500 3650 5500 3750
-Wire Bus Line
-	5500 3750 5500 3850
+	5500 2150 5500 3850
 Wire Bus Line
 	5500 2150 9650 2150
 Wire Bus Line
-	8750 2150 8750 3100
-Wire Bus Line
-	8750 3100 8750 3200
-Wire Bus Line
-	8750 3200 8750 3300
-Wire Bus Line
-	8750 3300 8750 3400
-Wire Bus Line
-	8750 3400 8750 3500
-Wire Bus Line
-	8750 3500 8750 3600
-Wire Bus Line
-	8750 3600 8750 3700
-Wire Bus Line
-	8750 3700 8750 3800
-Wire Bus Line
-	8750 3800 8750 3850
+	8750 2150 8750 3850
 Wire Wire Line
 	5150 3850 5400 3850
 Wire Wire Line
@@ -449,9 +377,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 2450 6850 2450
 Wire Wire Line
-	6850 2350 6850 2450
-Wire Wire Line
-	6850 2450 6850 3200
+	6850 2350 6850 3200
 Wire Wire Line
 	6850 3200 7050 3200
 Connection ~ 6850 2450

@@ -1,4 +1,4 @@
-update=9/19/2016 10:41:18 PM
+update=11/6/2016 2:37:30 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -45,9 +45,19 @@ LibName15=pga_sockets
 LibName16=valves
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=../../libraries/nixie.pretty;../kicad_proj
+LibDir=../../libraries/nixie.pretty
 [eeschema/libraries]
 LibName1=control_board-rescue
 LibName2=power
@@ -81,13 +91,3 @@ LibName29=contrib
 LibName30=valves
 LibName31=nixie_lib
 LibName32=nixie_clock-rescue
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60

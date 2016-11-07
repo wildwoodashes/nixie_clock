@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 4 6
 Title "Control Board"
 Date "2016-09-14"
 Rev "1.0"
@@ -211,153 +211,33 @@ F 3 "~" H 6050 5400 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text HLabel 1850 900  2    60   Output ~ 0
-SEL_ZERO
+SEL_N0_A
 Text HLabel 1850 1000 2    60   Output ~ 0
-SEL_ONE
+SEL_N0_B
 Text HLabel 1850 1100 2    60   Output ~ 0
-SEL_TWO
+SEL_N0_C
 Text HLabel 1850 1200 2    60   Output ~ 0
-SEL_THREE
+SEL_N0_D
 Text HLabel 1850 1300 2    60   Output ~ 0
-SEL_FOUR
+SEL_N1_A
 Text HLabel 1850 1400 2    60   Output ~ 0
-SEL_FIVE
+SEL_N1_B
 Text HLabel 1850 1500 2    60   Output ~ 0
-SEL_SIX
+SEL_N1_C
 Text HLabel 1850 1600 2    60   Output ~ 0
-SEL_SEVEN
+SEL_N1_D
 Text HLabel 1850 1700 2    60   Output ~ 0
-SEL_EIGHT
+SEL_N2_A
 Text HLabel 1850 1800 2    60   Output ~ 0
-SEL_NINE
-Text HLabel 1950 2400 2    60   Output ~ 0
-SEL_NIX1
-Text HLabel 1950 2500 2    60   Output ~ 0
-SEL_NIX2
-Text HLabel 1950 2600 2    60   Output ~ 0
-SEL_NIX3
-Text HLabel 1950 2300 2    60   Output ~ 0
-SEL_NIX0
-Entry Wire Line
-	1550 900  1650 1000
-Entry Wire Line
-	1550 1000 1650 1100
-Entry Wire Line
-	1550 1100 1650 1200
-Entry Wire Line
-	1550 1200 1650 1300
-Entry Wire Line
-	1550 1400 1650 1500
-Entry Wire Line
-	1550 1300 1650 1400
-Entry Wire Line
-	1550 1500 1650 1600
-Entry Wire Line
-	1550 1600 1650 1700
-Entry Wire Line
-	1550 1700 1650 1800
-Entry Wire Line
-	1550 800  1650 900 
-Entry Wire Line
-	1550 2300 1650 2400
-Entry Wire Line
-	1550 2400 1650 2500
-Entry Wire Line
-	1550 2500 1650 2600
-Entry Wire Line
-	1550 2200 1650 2300
-Text Label 1400 750  2    60   ~ 0
-DIGIT_SEL
-Text Label 1400 2150 2    60   ~ 0
-TUBE_SEL
-Text Label 1750 900  2    60   ~ 0
-S0
-Text Label 1750 1000 2    60   ~ 0
-S1
-Text Label 1750 1100 2    60   ~ 0
-S2
-Text Label 1750 1200 2    60   ~ 0
-S3
-Text Label 1750 1300 2    60   ~ 0
-S4
-Text Label 1750 1400 2    60   ~ 0
-S5
-Text Label 1750 1500 2    60   ~ 0
-S6
-Text Label 1750 1600 2    60   ~ 0
-S7
-Text Label 1750 1700 2    60   ~ 0
-S8
-Text Label 1750 1800 2    60   ~ 0
-S9
-Text Label 1800 2300 2    60   ~ 0
-SN0
-Text Label 1800 2400 2    60   ~ 0
-SN1
-Text Label 1800 2500 2    60   ~ 0
-SN2
-Text Label 1800 2600 2    60   ~ 0
-SN3
-Entry Wire Line
-	9250 2100 9350 2200
-Entry Wire Line
-	9250 2200 9350 2300
-Entry Wire Line
-	9250 2300 9350 2400
-Entry Wire Line
-	9250 2400 9350 2500
-Entry Wire Line
-	9250 2600 9350 2700
-Entry Wire Line
-	9250 2500 9350 2600
-Entry Wire Line
-	9250 2700 9350 2800
-Entry Wire Line
-	9350 3000 9250 2900
-Entry Wire Line
-	9350 2900 9250 2800
-Entry Wire Line
-	9250 2000 9350 2100
-Entry Wire Line
-	9350 3450 9250 3350
-Entry Wire Line
-	9350 3750 9250 3650
-Entry Wire Line
-	9350 3550 9250 3450
-Text Label 9650 1800 2    60   ~ 0
-DIGIT_SEL
-Text Label 9200 2000 2    60   ~ 0
-S0
-Text Label 9200 2100 2    60   ~ 0
-S1
-Text Label 9200 2200 2    60   ~ 0
-S2
-Text Label 9200 2300 2    60   ~ 0
-S3
-Text Label 9200 2400 2    60   ~ 0
-S4
-Text Label 9200 2500 2    60   ~ 0
-S5
-Text Label 9200 2600 2    60   ~ 0
-S6
-Text Label 9200 2700 2    60   ~ 0
-S7
-Text Label 9200 2800 2    60   ~ 0
-S8
-Text Label 9200 2900 2    60   ~ 0
-S9
-Entry Wire Line
-	9350 3650 9250 3550
-Text Label 9250 3450 2    60   ~ 0
-SN1
-Text Label 9250 3550 2    60   ~ 0
-SN2
-Text Label 9250 3650 2    60   ~ 0
-SN3
-Text Label 9250 3350 2    60   ~ 0
-SN0
-Text Label 9400 3850 0    60   ~ 0
-TUBE_SEL
+SEL_N2_B
+Text HLabel 1850 2200 2    60   Output ~ 0
+SEL_N3_B
+Text HLabel 1850 2300 2    60   Output ~ 0
+SEL_N3_C
+Text HLabel 1850 2400 2    60   Output ~ 0
+SEL_N3_D
+Text HLabel 1850 2100 2    60   Output ~ 0
+SEL_N3_A
 $Sheet
 S 8300 5150 850  850 
 U 54D9E22D
@@ -372,50 +252,34 @@ S 7200 1900 1300 1950
 U 54DAD1C9
 F0 "MCU Shift Registers" 60
 F1 "mch_shift.sch" 60
-F2 "SEL_ZERO" O R 8500 2000 60 
-F3 "SEL_ONE" O R 8500 2100 60 
-F4 "SEL_TWO" O R 8500 2200 60 
-F5 "SEL_THREE" O R 8500 2300 60 
-F6 "SEL_FOUR" O R 8500 2400 60 
-F7 "SEL_FIVE" O R 8500 2500 60 
-F8 "SEL_SIX" O R 8500 2600 60 
-F9 "SEL_SEVEN" O R 8500 2700 60 
-F10 "SEL_EIGHT" O R 8500 2800 60 
-F11 "SEL_NINE" O R 8500 2900 60 
-F12 "SER" I L 7200 2000 60 
-F13 "SRCLK" I L 7200 2100 60 
-F14 "SCLR" I L 7200 2200 60 
-F15 "OE" I L 7200 2300 60 
-F16 "RCLK" I L 7200 2400 60 
-F17 "SEL_DOT_TOP" O R 8500 3000 60 
-F18 "SEL_DOT_BOT" O R 8500 3100 60 
-F19 "SEL_NIX1" O R 8500 3450 60 
-F20 "SEL_NIX2" O R 8500 3550 60 
-F21 "SEL_NIX3" O R 8500 3650 60 
-F22 "SEL_NIX0" O R 8500 3350 60 
+F2 "SER" I L 7200 2000 60 
+F3 "SRCLK" I L 7200 2100 60 
+F4 "SCLR" I L 7200 2200 60 
+F5 "OE" I L 7200 2300 60 
+F6 "RCLK" I L 7200 2400 60 
+F7 "SEL_N0_A" O R 8500 2000 60 
+F8 "SEL_N0_B" O R 8500 2100 60 
+F9 "SEL_N0_C" O R 8500 2200 60 
+F10 "SEL_N0_D" O R 8500 2300 60 
+F11 "SEL_N1_A" O R 8500 2400 60 
+F12 "SEL_N1_B" O R 8500 2500 60 
+F13 "SEL_N1_C" O R 8500 2600 60 
+F14 "SEL_N1_D" O R 8500 2700 60 
+F15 "SEL_N2_A" O R 8500 2800 60 
+F16 "SEL_N2_B" O R 8500 2900 60 
+F17 "SEL_N2_C" O R 8500 3000 60 
+F18 "SEL_N2_D" O R 8500 3100 60 
+F19 "SEL_N3_A" O R 8500 3200 60 
+F20 "SEL_N3_B" O R 8500 3300 60 
+F21 "SEL_N3_C" O R 8500 3400 60 
+F22 "SEL_N3_D" O R 8500 3500 60 
 $EndSheet
-Entry Wire Line
-	9350 3200 9250 3100
-Entry Wire Line
-	9350 3100 9250 3000
-Text Label 9200 3000 2    60   ~ 0
-D0
-Text Label 9200 3100 2    60   ~ 0
-D1
 Text HLabel 1850 1900 2    60   Output ~ 0
-SEL_DOT_TOP
+SEL_N2_C
 Text HLabel 1850 2000 2    60   Output ~ 0
-SEL_DOT_BOT
-Entry Wire Line
-	1550 1800 1650 1900
-Entry Wire Line
-	1550 1900 1650 2000
-Text Label 1750 1900 2    60   ~ 0
-D0
-Text Label 1750 2000 2    60   ~ 0
-D1
-Text HLabel 5100 4250 2    60   Output ~ 0
-180V_SHTDN
+SEL_N2_D
+Text HLabel 1850 2600 2    60   Output ~ 0
+180V_EN
 $Comp
 L CONN_02X05 P3
 U 1 1 57592C16
@@ -530,17 +394,6 @@ NoConn ~ 5000 1650
 Text Notes 850  6900 0    60   ~ 0
 Connect unused pins to pads
 $Comp
-L CONN_02X06 P2
-U 1 1 575D8CF9
-P 1450 6400
-F 0 "P2" H 1450 6750 50  0000 C CNN
-F 1 "CONN_02X06" H 1450 6050 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x06" H 1450 5200 50  0001 C CNN
-F 3 "" H 1450 5200 50  0000 C CNN
-	1    1450 6400
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR025
 U 1 1 575D8FF3
 P 1850 6650
@@ -553,8 +406,6 @@ F 3 "" H 1850 6650 60  0000 C CNN
 $EndComp
 Text Label 4900 3700 0    60   ~ 0
 CYA0
-Text Label 4900 3800 0    60   ~ 0
-CYA1
 Text Label 4900 3950 0    60   ~ 0
 CYA2
 Text Label 4900 4050 0    60   ~ 0
@@ -680,78 +531,6 @@ Wire Wire Line
 Wire Wire Line
 	7750 4450 7750 4700
 Connection ~ 7750 4550
-Wire Bus Line
-	1250 750  1550 750 
-Wire Bus Line
-	1550 750  1550 1900
-Wire Bus Line
-	1250 2150 1550 2150
-Wire Bus Line
-	1550 2150 1550 2550
-Wire Wire Line
-	1650 900  1850 900 
-Wire Wire Line
-	1850 1000 1650 1000
-Wire Wire Line
-	1650 1100 1850 1100
-Wire Wire Line
-	1850 1200 1650 1200
-Wire Wire Line
-	1850 1300 1650 1300
-Wire Wire Line
-	1850 1400 1650 1400
-Wire Wire Line
-	1650 1500 1850 1500
-Wire Wire Line
-	1650 1600 1850 1600
-Wire Wire Line
-	1650 1700 1850 1700
-Wire Wire Line
-	1650 1800 1850 1800
-Wire Wire Line
-	1650 2300 1950 2300
-Wire Wire Line
-	1650 2400 1950 2400
-Wire Wire Line
-	1650 2500 1950 2500
-Wire Wire Line
-	1650 2600 1950 2600
-Wire Bus Line
-	9350 1800 9650 1800
-Wire Bus Line
-	9350 1800 9350 3200
-Wire Wire Line
-	8500 2000 9250 2000
-Wire Wire Line
-	8500 2100 9250 2100
-Wire Wire Line
-	8500 2200 9250 2200
-Wire Wire Line
-	8500 2300 9250 2300
-Wire Wire Line
-	8500 2400 9250 2400
-Wire Wire Line
-	8500 2500 9250 2500
-Wire Wire Line
-	8500 2600 9250 2600
-Wire Wire Line
-	8500 2700 9250 2700
-Wire Wire Line
-	8500 2800 9250 2800
-Wire Wire Line
-	8500 2900 9250 2900
-Wire Bus Line
-	9350 3450 9350 3850
-Wire Wire Line
-	8500 3450 9250 3450
-Wire Wire Line
-	8500 3550 9250 3550
-Wire Wire Line
-	8500 3650 9250 3650
-Wire Wire Line
-	8500 3350 9250 3350
-Wire Bus Line
-	9350 3850 9450 3850
 Wire Notes Line
 	2850 2700 800  2700
 Wire Notes Line
@@ -777,16 +556,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 5200 7850 5650
 Connection ~ 7850 5650
-Wire Wire Line
-	8500 3000 9250 3000
-Wire Wire Line
-	8500 3100 9250 3100
-Wire Wire Line
-	1650 1900 1850 1900
-Wire Wire Line
-	1650 2000 1850 2000
-Wire Wire Line
-	3950 4250 5100 4250
 Wire Wire Line
 	6350 2000 7200 2000
 Wire Wire Line
@@ -878,9 +647,9 @@ Wire Wire Line
 Wire Wire Line
 	750  4550 2050 4550
 Wire Wire Line
-	1200 6150 1100 6150
+	1200 6250 1100 6250
 Wire Wire Line
-	1100 6150 1100 5850
+	1100 6250 1100 5950
 Wire Wire Line
 	1700 6650 1850 6650
 Wire Wire Line
@@ -900,8 +669,6 @@ Wire Wire Line
 Text Label 1500 4550 0    60   ~ 0
 CYA8
 Wire Wire Line
-	800  6250 1200 6250
-Wire Wire Line
 	800  6350 1200 6350
 Wire Wire Line
 	800  6450 1200 6450
@@ -913,10 +680,8 @@ Wire Wire Line
 	2000 6550 1700 6550
 Wire Wire Line
 	2000 6450 1700 6450
-Text Label 850  6250 0    60   ~ 0
-CYA0
 Text Label 850  6350 0    60   ~ 0
-CYA1
+CYA0
 Text Label 850  6450 0    60   ~ 0
 CYA2
 Text Label 850  6550 0    60   ~ 0
@@ -931,7 +696,6 @@ Text Label 1750 6250 0    60   ~ 0
 CYA7
 Text Label 1750 6350 0    60   ~ 0
 CYA8
-NoConn ~ 1700 6150
 Wire Wire Line
 	3100 7400 2950 7400
 Connection ~ 2950 7400
@@ -997,12 +761,12 @@ $EndComp
 $Comp
 L +5V #PWR?
 U 1 1 581F26A4
-P 1100 5850
-F 0 "#PWR?" H 1100 5700 50  0001 C CNN
-F 1 "+5V" H 1100 5990 50  0000 C CNN
-F 2 "" H 1100 5850 50  0000 C CNN
-F 3 "" H 1100 5850 50  0000 C CNN
-	1    1100 5850
+P 1100 5950
+F 0 "#PWR?" H 1100 5800 50  0001 C CNN
+F 1 "+5V" H 1100 6090 50  0000 C CNN
+F 2 "" H 1100 5950 50  0000 C CNN
+F 3 "" H 1100 5950 50  0000 C CNN
+	1    1100 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1017,9 +781,11 @@ F 3 "" H 1000 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_LPH_PUSH SW4
+L SW_LPH_PUSH-RESCUE-control_board SW4
 U 1 1 54E288B4
 P 3400 7400
+AR Path="/54E288B4" Ref="SW4"  Part="1" 
+AR Path="/51B40844/54E288B4" Ref="SW4"  Part="1" 
 F 0 "SW4" H 3550 7510 50  0000 C CNN
 F 1 "SW_LPH_PUSH" H 3400 7200 50  0000 C CNN
 F 2 "Nixie:FSMRA5JH" H 3950 7450 60  0000 C CNN
@@ -1028,9 +794,11 @@ F 3 "" H 3400 7400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_LPH_PUSH SW3
+L SW_LPH_PUSH-RESCUE-control_board SW3
 U 1 1 54E2867C
 P 3400 6850
+AR Path="/54E2867C" Ref="SW3"  Part="1" 
+AR Path="/51B40844/54E2867C" Ref="SW3"  Part="1" 
 F 0 "SW3" H 3550 6960 50  0000 C CNN
 F 1 "SW_LPH_PUSH" H 3400 6650 50  0000 C CNN
 F 2 "Nixie:FSMRA5JH" H 3950 6900 60  0000 C CNN
@@ -1039,9 +807,11 @@ F 3 "" H 3400 6850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_LPH_PUSH SW2
+L SW_LPH_PUSH-RESCUE-control_board SW2
 U 1 1 54E2863D
 P 3400 6350
+AR Path="/54E2863D" Ref="SW2"  Part="1" 
+AR Path="/51B40844/54E2863D" Ref="SW2"  Part="1" 
 F 0 "SW2" H 3550 6460 50  0000 C CNN
 F 1 "SW_LPH_PUSH" H 3400 6150 50  0000 C CNN
 F 2 "Nixie:FSMRA5JH" H 3950 6400 60  0000 C CNN
@@ -1050,9 +820,11 @@ F 3 "" H 3400 6350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_LPH_PUSH SW1
+L SW_LPH_PUSH-RESCUE-control_board SW1
 U 1 1 54E28102
 P 3400 5850
+AR Path="/54E28102" Ref="SW1"  Part="1" 
+AR Path="/51B40844/54E28102" Ref="SW1"  Part="1" 
 F 0 "SW1" H 3550 5960 50  0000 C CNN
 F 1 "SW_LPH_PUSH" H 3400 5650 50  0000 C CNN
 F 2 "Nixie:FSMRA5JH" H 3950 5900 60  0000 C CNN
@@ -1076,4 +848,159 @@ NoConn ~ 3700 5950
 NoConn ~ 3700 6450
 NoConn ~ 3700 6950
 NoConn ~ 3700 7500
+Text HLabel 1850 2500 2    60   Output ~ 0
+COL_SEL
+$Comp
+L CONN_02X05 P?
+U 1 1 581FC07F
+P 1450 6450
+F 0 "P?" H 1450 6750 50  0000 C CNN
+F 1 "CONN_02X05" H 1450 6150 50  0000 C CNN
+F 2 "" H 1450 5250 50  0000 C CNN
+F 3 "" H 1450 5250 50  0000 C CNN
+	1    1450 6450
+	1    0    0    -1  
+$EndComp
+Text Label 8750 2800 2    60   ~ 0
+N2_A
+Text Label 8750 2900 2    60   ~ 0
+N2_B
+Text Label 8750 3000 2    60   ~ 0
+N2_C
+Text Label 8750 3100 2    60   ~ 0
+N2_D
+Text Label 8750 3200 2    60   ~ 0
+N3_A
+Text Label 8750 3300 2    60   ~ 0
+N3_B
+Text Label 8750 3400 2    60   ~ 0
+N3_C
+Text Label 8750 3500 2    60   ~ 0
+N3_D
+Text Label 8750 2000 2    60   ~ 0
+N0_A
+Text Label 8750 2100 2    60   ~ 0
+N0_B
+Text Label 8750 2200 2    60   ~ 0
+N0_C
+Text Label 8750 2300 2    60   ~ 0
+N0_D
+Text Label 8750 2400 2    60   ~ 0
+N1_A
+Text Label 8750 2500 2    60   ~ 0
+N1_B
+Text Label 8750 2600 2    60   ~ 0
+N1_C
+Text Label 8750 2700 2    60   ~ 0
+N1_D
+Wire Wire Line
+	8500 3500 9000 3500
+Wire Wire Line
+	8500 3400 9000 3400
+Wire Wire Line
+	8500 3300 9000 3300
+Wire Wire Line
+	8500 3200 9000 3200
+Wire Wire Line
+	8500 3100 9000 3100
+Wire Wire Line
+	8500 3000 9000 3000
+Wire Wire Line
+	8500 2900 9000 2900
+Wire Wire Line
+	8500 2800 9000 2800
+Wire Wire Line
+	8500 2700 9000 2700
+Wire Wire Line
+	8500 2600 9000 2600
+Wire Wire Line
+	9000 2500 8500 2500
+Wire Wire Line
+	9000 2400 8500 2400
+Wire Wire Line
+	9000 2300 8500 2300
+Wire Wire Line
+	8500 2200 9000 2200
+Wire Wire Line
+	9000 2100 8500 2100
+Wire Wire Line
+	8500 2000 9000 2000
+Text Label 1600 1700 2    60   ~ 0
+N2_A
+Text Label 1600 1800 2    60   ~ 0
+N2_B
+Text Label 1600 1900 2    60   ~ 0
+N2_C
+Text Label 1600 2000 2    60   ~ 0
+N2_D
+Text Label 1600 2100 2    60   ~ 0
+N3_A
+Text Label 1600 2200 2    60   ~ 0
+N3_B
+Text Label 1600 2300 2    60   ~ 0
+N3_C
+Text Label 1600 2400 2    60   ~ 0
+N3_D
+Text Label 1600 900  2    60   ~ 0
+N0_A
+Text Label 1600 1000 2    60   ~ 0
+N0_B
+Text Label 1600 1100 2    60   ~ 0
+N0_C
+Text Label 1600 1200 2    60   ~ 0
+N0_D
+Text Label 1600 1300 2    60   ~ 0
+N1_A
+Text Label 1600 1400 2    60   ~ 0
+N1_B
+Text Label 1600 1500 2    60   ~ 0
+N1_C
+Text Label 1600 1600 2    60   ~ 0
+N1_D
+Wire Wire Line
+	1350 2400 1850 2400
+Wire Wire Line
+	1350 2300 1850 2300
+Wire Wire Line
+	1350 2200 1850 2200
+Wire Wire Line
+	1350 2100 1850 2100
+Wire Wire Line
+	1350 2000 1850 2000
+Wire Wire Line
+	1350 1900 1850 1900
+Wire Wire Line
+	1350 1800 1850 1800
+Wire Wire Line
+	1350 1700 1850 1700
+Wire Wire Line
+	1350 1600 1850 1600
+Wire Wire Line
+	1350 1500 1850 1500
+Wire Wire Line
+	1850 1400 1350 1400
+Wire Wire Line
+	1850 1300 1350 1300
+Wire Wire Line
+	1850 1200 1350 1200
+Wire Wire Line
+	1350 1100 1850 1100
+Wire Wire Line
+	1850 1000 1350 1000
+Wire Wire Line
+	1350 900  1850 900 
+Text Label 1600 2500 2    60   ~ 0
+COL_SEL
+Wire Wire Line
+	1350 2600 1850 2600
+Wire Wire Line
+	1350 2500 1850 2500
+Text Label 5150 3800 2    60   ~ 0
+COL_SEL
+Text Label 5100 4250 2    60   ~ 0
+180V_EN
+Wire Wire Line
+	3950 4250 5150 4250
+Text Label 1600 2600 2    60   ~ 0
+180V_EN
 $EndSCHEMATC
