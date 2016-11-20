@@ -51,7 +51,7 @@ S 5100 3950 750  300
 U 51B3FAE1
 F0 "Nixie Power Supply" 50
 F1 "nixie_power_supply.sch" 50
-F2 "180V_EN" I L 5100 4100 60 
+F2 "180V_SHDN" I L 5100 4100 60 
 $EndSheet
 $Sheet
 S 5250 5050 800  600 
@@ -200,7 +200,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 3000 7950 3000
 Wire Wire Line
-	7400 3100 7950 3100
+	6350 3100 6900 3100
 Text Label 4050 2050 0    60   ~ 0
 SEL_N0_A
 Text Label 4050 2150 0    60   ~ 0
@@ -340,7 +340,7 @@ F15 "SEL_N3_A" O R 3800 3250 60
 F16 "SEL_N2_C" O R 3800 3050 60 
 F17 "SEL_N2_D" O R 3800 3150 60 
 F18 "COL_SEL" O R 3800 3650 60 
-F19 "180V_EN" O R 3800 4100 60 
+F19 "180V_SHDN" O R 3800 4100 60 
 $EndSheet
 Wire Wire Line
 	6750 3200 6750 3300
@@ -361,18 +361,18 @@ Wire Wire Line
 Wire Wire Line
 	6350 3000 6900 3000
 Wire Wire Line
-	6900 3100 5950 3100
+	8350 3100 7400 3100
 Wire Wire Line
-	5950 3100 5950 2850
+	8350 3100 8350 2850
 $Comp
 L +5V #PWR06
 U 1 1 581FD7A7
-P 5950 2850
-F 0 "#PWR06" H 5950 2700 50  0001 C CNN
-F 1 "+5V" H 5950 2990 50  0000 C CNN
-F 2 "" H 5950 2850 50  0000 C CNN
-F 3 "" H 5950 2850 50  0000 C CNN
-	1    5950 2850
+P 8350 2850
+F 0 "#PWR06" H 8350 2700 50  0001 C CNN
+F 1 "+5V" H 8350 2990 50  0000 C CNN
+F 2 "" H 8350 2850 50  0000 C CNN
+F 3 "" H 8350 2850 50  0000 C CNN
+	1    8350 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -387,39 +387,39 @@ Wire Wire Line
 	3800 3650 4700 3650
 Text Label 4050 3650 0    60   ~ 0
 SEL_COL
-Text Label 7500 3100 0    60   ~ 0
+Text Label 6400 3100 0    60   ~ 0
 SEL_COL
-Text Label 6400 2700 0    60   ~ 0
-SEL_N0_A
-Text Label 6400 2800 0    60   ~ 0
-SEL_N0_B
-Text Label 6400 2900 0    60   ~ 0
-SEL_N0_C
-Text Label 6400 3000 0    60   ~ 0
-SEL_N0_D
 Text Label 7500 2700 0    60   ~ 0
-SEL_N1_A
+SEL_N0_A
 Text Label 7500 2800 0    60   ~ 0
-SEL_N1_B
+SEL_N0_B
 Text Label 7500 2900 0    60   ~ 0
-SEL_N1_C
+SEL_N0_C
 Text Label 7500 3000 0    60   ~ 0
+SEL_N0_D
+Text Label 6400 2700 0    60   ~ 0
+SEL_N1_A
+Text Label 6400 2800 0    60   ~ 0
+SEL_N1_B
+Text Label 6400 2900 0    60   ~ 0
+SEL_N1_C
+Text Label 6400 3000 0    60   ~ 0
 SEL_N1_D
-Text Label 6400 2300 0    60   ~ 0
-SEL_N3_A
-Text Label 6400 2400 0    60   ~ 0
-SEL_N3_B
-Text Label 6400 2500 0    60   ~ 0
-SEL_N3_C
-Text Label 6400 2600 0    60   ~ 0
-SEL_N3_D
 Text Label 7500 2300 0    60   ~ 0
-SEL_N2_A
+SEL_N3_A
 Text Label 7500 2400 0    60   ~ 0
-SEL_N2_B
-Text Label 7500 2600 0    60   ~ 0
-SEL_N2_D
+SEL_N3_B
 Text Label 7500 2500 0    60   ~ 0
+SEL_N3_C
+Text Label 7500 2600 0    60   ~ 0
+SEL_N3_D
+Text Label 6400 2300 0    60   ~ 0
+SEL_N2_A
+Text Label 6400 2400 0    60   ~ 0
+SEL_N2_B
+Text Label 6400 2600 0    60   ~ 0
+SEL_N2_D
+Text Label 6400 2500 0    60   ~ 0
 SEL_N2_C
 $Comp
 L +180V #PWR07

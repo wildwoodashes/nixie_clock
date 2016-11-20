@@ -162,25 +162,25 @@ Entry Wire Line
 	8750 3200 8650 3300
 Entry Wire Line
 	8750 3100 8650 3200
-Text Label 5400 3150 2    60   ~ 0
+Text Label 8650 3600 2    60   ~ 0
 N0_A
-Text Label 5400 3250 2    60   ~ 0
+Text Label 8650 3700 2    60   ~ 0
 N0_B
-Text Label 5400 3350 2    60   ~ 0
+Text Label 8650 3800 2    60   ~ 0
 N0_C
-Text Label 5400 3450 2    60   ~ 0
+Text Label 8650 3900 2    60   ~ 0
 N0_D
-Text Label 5400 3550 2    60   ~ 0
-N1_A
-Text Label 5400 3650 2    60   ~ 0
-N1_B
-Text Label 5400 3750 2    60   ~ 0
-N1_C
-Text Label 5400 3850 2    60   ~ 0
-N1_D
 Text Label 8650 3200 2    60   ~ 0
-N2_A
+N1_A
 Text Label 8650 3300 2    60   ~ 0
+N1_B
+Text Label 8650 3400 2    60   ~ 0
+N1_C
+Text Label 8650 3500 2    60   ~ 0
+N1_D
+Text Label 5350 3550 2    60   ~ 0
+N2_A
+Text Label 5350 3650 2    60   ~ 0
 N2_B
 Text HLabel 10250 3800 2    60   Output ~ 0
 SEL_N2_C
@@ -194,9 +194,9 @@ Entry Wire Line
 	8750 3400 8650 3500
 Entry Wire Line
 	8750 3300 8650 3400
-Text Label 8650 3400 2    60   ~ 0
+Text Label 5350 3750 2    60   ~ 0
 N2_C
-Text Label 8650 3500 2    60   ~ 0
+Text Label 5350 3850 2    60   ~ 0
 N2_D
 $Comp
 L GND #PWR053
@@ -397,13 +397,13 @@ Wire Wire Line
 	8450 3800 8650 3800
 Wire Wire Line
 	8450 3900 8650 3900
-Text Label 8650 3600 2    60   ~ 0
+Text Label 5350 3150 2    60   ~ 0
 N3_A
-Text Label 8650 3700 2    60   ~ 0
+Text Label 5350 3250 2    60   ~ 0
 N3_B
-Text Label 8650 3800 2    60   ~ 0
+Text Label 5350 3350 2    60   ~ 0
 N3_C
-Text Label 8650 3900 2    60   ~ 0
+Text Label 5350 3450 2    60   ~ 0
 N3_D
 Text Label 10000 3600 2    60   ~ 0
 N2_A

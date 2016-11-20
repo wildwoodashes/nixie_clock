@@ -98,20 +98,9 @@ U 1 1 575E0972
 P 4550 2800
 F 0 "R30" V 4630 2800 50  0000 C CNN
 F 1 "100k" V 4550 2800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4480 2800 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4480 2800 50  0001 C CNN
 F 3 "" H 4550 2800 50  0000 C CNN
 	1    4550 2800
-	0    1    1    0   
-$EndComp
-$Comp
-L R R31
-U 1 1 575E0A55
-P 4550 3650
-F 0 "R31" V 4630 3650 50  0000 C CNN
-F 1 "100k" V 4550 3650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4480 3650 50  0001 C CNN
-F 3 "" H 4550 3650 50  0000 C CNN
-	1    4550 3650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -206,5 +195,16 @@ F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 7700 4125 50  0001 L CIN
 F 3 "" H 7500 4200 50  0000 L CNN
 	1    7500 4200
 	1    0    0    -1  
+$EndComp
+$Comp
+L R R31
+U 1 1 575E0A55
+P 4550 3650
+F 0 "R31" V 4630 3650 50  0000 C CNN
+F 1 "100k" V 4550 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4480 3650 50  0001 C CNN
+F 3 "" H 4550 3650 50  0000 C CNN
+	1    4550 3650
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
