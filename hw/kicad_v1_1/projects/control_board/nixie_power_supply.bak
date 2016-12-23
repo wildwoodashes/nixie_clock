@@ -529,4 +529,18 @@ Wire Wire Line
 Wire Wire Line
 	2250 4150 2250 4300
 Connection ~ 2250 4300
+$Comp
+L TEST_1P W1
+U 1 1 583539E6
+P 8750 2650
+F 0 "W1" H 8750 2920 50  0000 C CNN
+F 1 "TEST_1P" H 8750 2850 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-TH_Big" H 8950 2650 50  0001 C CNN
+F 3 "" H 8950 2650 50  0000 C CNN
+	1    8750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2650 8750 2750
+Connection ~ 8750 2750
 $EndSCHEMATC

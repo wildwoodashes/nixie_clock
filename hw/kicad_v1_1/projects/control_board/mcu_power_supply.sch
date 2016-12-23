@@ -38,8 +38,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
 Title "Control Board"
-Date "2016-09-14"
-Rev "1.0"
+Date "2016-11-21"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -273,4 +273,18 @@ F 3 "" H 7950 4900 50  0000 C CNN
 	1    7950 4900
 	1    0    0    -1  
 $EndComp
+$Comp
+L TEST_1P W2
+U 1 1 58353EA2
+P 7350 3400
+F 0 "W2" H 7350 3670 50  0000 C CNN
+F 1 "TEST_1P" H 7350 3600 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-TH_Big" H 7550 3400 50  0001 C CNN
+F 3 "" H 7550 3400 50  0000 C CNN
+	1    7350 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3400 7350 3500
+Connection ~ 7350 3500
 $EndSCHEMATC

@@ -544,7 +544,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 5050 7100 5050
 Wire Wire Line
-	2400 3500 3250 3500
+	3250 3500 2400 3500
 Wire Wire Line
 	800  3150 800  3250
 Wire Wire Line

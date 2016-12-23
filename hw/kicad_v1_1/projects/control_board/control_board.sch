@@ -38,8 +38,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "Control Board"
-Date "2016-09-14"
-Rev "1.0"
+Date "2016-11-21"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -131,7 +131,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 1400 2600 1100
 Wire Wire Line
-	1600 1600 2000 1600
+	1600 1600 3350 1600
 Wire Wire Line
 	2000 1600 2000 1750
 Wire Wire Line
@@ -454,4 +454,18 @@ F 3 "" H 7500 3300 60  0000 C CNN
 	1    7500 3300
 	1    0    0    -1  
 $EndComp
+Connection ~ 2000 1600
+$Comp
+L TEST_1P W3
+U 1 1 583539C0
+P 3350 1550
+F 0 "W3" H 3350 1820 50  0000 C CNN
+F 1 "TEST_1P" H 3350 1750 50  0000 C CNN
+F 2 "Measurement_Points:Test_Point_Keystone_5019_Minature" H 3550 1550 50  0001 C CNN
+F 3 "" H 3550 1550 50  0000 C CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1600 3350 1550
 $EndSCHEMATC
