@@ -1,4 +1,4 @@
-update=9/19/2016 10:40:49 PM
+update=11/21/2016 9:50:47 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -84,7 +84,7 @@ LibName32=nixie_clock-rescue
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=gerbers/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=

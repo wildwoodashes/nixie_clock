@@ -1,4 +1,4 @@
-update=9/19/2016 10:41:18 PM
+update=11/22/2016 9:09:23 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -47,7 +47,7 @@ LibName16=valves
 version=1
 [eeschema]
 version=1
-LibDir=../../libraries/nixie.pretty;../kicad_proj
+LibDir=../../libraries/nixie.pretty
 [eeschema/libraries]
 LibName1=control_board-rescue
 LibName2=power
@@ -84,10 +84,10 @@ LibName32=nixie_clock-rescue
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=gerbers/
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60

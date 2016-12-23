@@ -1,0 +1,13 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"U4,U3,U2,U1";"DIP-16_W7.62mm_LongPads";4;"K155ID1";;;
+2;"P1";"Pin_Header_Straight_2x12_isolate_hv";1;"CONN_02X12_isolate_hv";;;
+3;"N1,N2";"neon_ind";2;"C2A";;;
+4;"R32,R33";"R_0805_HandSoldering";2;"4.7k";;;
+5;"P2";"MountingHole_3.2mm_M3_ISO7380_Pad";1;"CONN_01X01";;;
+6;"P3,P4,P5";"MountingHole_3.2mm_M3_ISO14580_Pad";3;"CONN_01X01";;;
+7;"Q1,Q2";"SOT-23_Handsoldering";2;"MMBTA42";;;
+8;"R1,R2,R10";"R_1206_HandSoldering";3;"15k";;;
+9;"R3";"R_1206_HandSoldering";1;"12k";;;
+10;"R30,R31";"R_1206_HandSoldering";2;"100k";;;
+11;"C1,C2,C3,C4";"C_0805_HandSoldering";4;"0.1u";;;
+12;"NX3,NX4,NX2,NX1";"pl27-1pd";4;"IN-8";;;
