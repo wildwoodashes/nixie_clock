@@ -104,8 +104,9 @@ void init_time(struct time *obj){
 }
 
 void write_seconds(void){
-	// write_rtc(0x00, ((1<<7)|((clock_time.seconds_tens&0x7) << 4)|(clock_time.seconds_ones&0xF)))  ; // set the seconds + enable the RTC oscillator 
-	write_rtc(0x00, ((1<<7)|((0&0x7) << 4)|(clock_time.seconds_ones&0xF)))  ; // set the seconds + enable the RTC oscillator 
+	write_rtc(0x00, ((1<<7)|((clock_time.seconds_tens&0x7) << 4)|(clock_time.seconds_ones&0xF)))  ; // set the seconds + enable the RTC oscillator 
+	// write_rtc(0x00, ((1<<7)|((0&0x7) << 4)|(0&0xF)))  ; // set the seconds + enable the RTC oscillator 
+
 }
 
 void write_hours(void){
@@ -258,7 +259,6 @@ void timer1_init(void){
   // OCR1A = 0x30D;			  	   // Freq ~ 10Hz
   OCR1A = 0xF41;	               // Freq ~ 2Hz
   TIMSK1 |= (1<<OCIE1A);		   // Enable interrupt
-  sei();
 }
 //*******************************************************
 
@@ -315,8 +315,11 @@ uint8_t main(void){
     power_en = TRUE;
     nixie_tube_supply(power_en);
 
+    // Enable interrupts now that everything is set_new_handler
+    sei();
 
 	while(TRUE){
+        // get_time();
         if(power_en == FALSE){
             // Turn the dispaly back on with user override of any button press
             if(chk_button_momt(0) || chk_button_momt(1) || chk_button_momt(2)){
@@ -324,14 +327,12 @@ uint8_t main(void){
                 user_override = TRUE;
                 nixie_tube_supply(power_en);
             }
-            // /*
             else if((clock_time.pm_am_n == pwr_dwn_stop_time.pm_am_n) && (clock_time.hours == pwr_dwn_stop_time.hours) && (clock_time.minutes  == pwr_dwn_stop_time.minutes)){
                 // Restore power at user selected time
                 power_en = TRUE;
                 user_override = FALSE;
                 nixie_tube_supply(power_en);
             }
-            // */
         }
         else if(chk_button_hold(0) && chk_button_hold(1)){
             // Reset all times to zero
@@ -342,8 +343,10 @@ uint8_t main(void){
             mode = mode < 3 ? mode + 1 : 0; // 0 = time, 1 = time_set, 2=power_off_start, 3=power_off_stop
             // Write power down settings to memory on returning to time
             if(mode == 0){
+                cli(); // Protect EEPROM Write from interrupts
                 eeprom_write_block ((const void*)&pwr_dwn_start_time, (void*) &pwr_dwn_start_time_eeprom, sizeof(pwr_dwn_start_time_eeprom));
                 eeprom_write_block ((const void*)&pwr_dwn_stop_time, (void*) &pwr_dwn_stop_time_eeprom, sizeof(pwr_dwn_stop_time_eeprom));
+                sei(); // Renable interrupts
             }            
         }
         else if(mode == 1){

@@ -2,6 +2,7 @@
 //A. Briggs
 //10/09/16
 
+#include <avr/interrupt.h>
 #include "rtc.h"
 
 #define TRUE 1
@@ -61,12 +62,12 @@ uint8_t twi_read_nack(void)
 // Write a value to the RTC
 //
 void write_rtc(uint8_t addr, uint8_t data){
-	
+	cli(); // Prevent interrupts from breaking I2C command
 	twi_start();
 	twi_write(WRITE_RTC); // Send command to read from address
 	twi_write(addr); // Send address of part number
 	twi_write(data); // Send command to read data
-
+    sei(); // Renable interrupts
 }
 /**************************************************************/
 
